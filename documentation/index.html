@@ -1,0 +1,12 @@
+---
+layout: index
+title: index
+---
+
+{% for page in site.pages %}
+    {% if page.title != 'index'%}
+        <section id="{{ page.sectionid }}" class="{{ page.sectionclass }}">
+            {{ page.content }}
+        </section>
+    {% endif %}
+{% endfor %}
