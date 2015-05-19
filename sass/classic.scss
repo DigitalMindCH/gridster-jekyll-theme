@@ -1,5 +1,6 @@
-@import "modules/all";
-@import "partials/base";
+@import "toolbox/all";
+@import "base/settings";
+@import "base/typography";
 
 $imgchange: 775px;
 
@@ -12,7 +13,7 @@ $imgchange: 775px;
 
     article{
         position: relative;
-        @extend %clearfix;
+        @include clearfix();
 
         img,
         > iframe {

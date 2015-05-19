@@ -1,13 +1,4 @@
-// grab some heights
-var $fullheight = $('.head').innerHeight(),
-    $shrinkheight = $('shrink').innerHeight(),
-    $menuhheight = $('main_menu').innerHeight(),
-    $minheight = $(window).height() + 10 + $menuhheight + $shrinkheight;
-
 $(document).ready(function() {
-    // add header height as margin to body, set min-height so header can shrink without causing problems
-    $('body').css({ 'margin-top': $fullheight, 'min-height': $minheight });
-
     // Back to top link
     $('.backtotop').click(function () {
         $('body,html').animate({
@@ -19,11 +10,6 @@ $(document).ready(function() {
     // Responsive Menu
     $(".toggle_link").click(function () {
         $("#menu").toggleClass("active");
-    });
-
-    $(".parent a").attr("aria-haspopup", "true");
-    $(".parent a").click(function () {
-        $(this).parent().toggleClass("open");
     });
 
     // Search
@@ -56,16 +42,7 @@ $(document).ready(function() {
 
 
 $(window).scroll(function() {
-    var $shrunkheight = $('.head').innerHeight();
-
-    // shrink header on scroll
-    if ($(this).scrollTop() > 80) {
-        $('.head .row').addClass("shrink");
-        $('body').css({ 'margin-top': $shrunkheight });
-    } else{
-        $('.head .row').removeClass("shrink");
-        $('body').css({ 'margin-top': $fullheight });
-    }
+    // scroll stuff
 });
 
 // lightbox stuff

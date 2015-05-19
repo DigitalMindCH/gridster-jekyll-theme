@@ -1,0 +1,161 @@
+// Shortcuts
+//-----------
+$noborder: 0 solid transparent;
+$line: 1px solid $sand;
+
+// SETTINGS FOR BASE-STYLE
+//-------------------
+
+// yes/no variables (use yes or no as values)
+//--------------------------------------------
+
+// if set to yes a background-color will be added to body
+$background-color-setting: yes;
+
+// if set to yes a transition will be applied to links
+$link-transition: yes;
+
+// decide if links will be underlined or not
+$link-line-default: no;
+$link-line-hover: no;
+
+// if set to yes, each paragraph following after another,
+// will have a margin-top
+$paragraph-gap: no;
+
+// if set to yes, settings for a container class will be added
+$container-settings: yes;
+
+// if set to yes, some more minimal defaults for tags will be restored (as in: cite, input, textarea etc.)
+$extended-defaults: yes;
+
+// if set to yes blockquotes will be styled with a border on the left, padding and margin
+$include-blockquote-style: yes;
+
+// if set to yes tables will be styled according to settings
+$include-table-style: no;
+
+// if set to yes, defintion lists will be styled
+$include-definition-list-style: yes;
+
+// if set to yes, WordPress default classes will be added
+$inlcude-WordPress-kit: no;
+
+// color variables (use colors as values)
+//----------------------------------------
+
+$main-color: $black;
+$link-color: $dm-blue;
+$link-hover-color: $accent;
+
+// String Variables (use strings as values | for Font Variables: Don't forget to include the fonts)
+//------------------------------------------
+
+$main-font: 'Roboto', 'Calibri', 'Arial', sans-serif;
+
+// set to $main-font if you don't want your headings to use another font
+$headings-font: $main-font;
+
+// use values from text-transform [none|capitalize|uppercase|lowercase|initial|inherit]
+$headings-text-transform: none;
+
+$code-font: 'Source Code Pro', Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+
+// size variables (use numbers as values (units as indicated ))
+
+// font-weights, alternatively use: [light, normal, bold]
+$main-font-weight: 400;
+
+// set $main-font-weight if you don't want your headings to use another font-weight
+$headings-font-weight: 400;
+
+// use px here
+$root-font-size: 17px;
+
+// do not add a unit here
+$basic-line-height: 1.5;
+
+// yes/no-dependant
+//------------------
+// if the dependant variable is set to no,
+// the variables can be ignored
+
+// depends on: $background-color-setting
+$background-color: #F9F9F9;
+
+// depends on: $paragraph-gap
+$paragraph-gap-size: 5px;
+
+// depends on: $container-settings
+$container-class-name: 'content';
+$container-background-color: transparent;
+$container-max-width: 1500px; // use px here
+$container-width: 90%; // use % here
+
+// depends on: $include-blockquote-style
+$blockquote-border: 1px solid rgba(black, 0.3);
+
+// depends on: $include-table-style
+$table-border: 1px solid rgba(black, 0.1);
+$even-rows-bg: rgba(black, 0.02);
+
+// depends on: $include-definition-list-style
+$definition-list-border: 1px solid rgba(black, 0.1);
+
+// PROJECT SETTINGS
+//------------------
+$h1-fontsize: 4.2rem !default;
+$h2-fontsize: 3.56rem !default;
+$h3-fontsize: 2.92rem !default;
+$h4-fontsize: 2.28rem !default;
+$h5-fontsize: 1.64rem !default;
+$h6-fontsize: 1rem !default;
+
+
+$body_bg-img: url(/img/swirl.jpg); // adjust if you use baseurl, place this before as it will not automatically be added
+
+$sidebarcollapse: 1330px;
+
+$layoutswitch_a_color: $blue;
+$layoutswitch_a_hover_color: $green;
+$box_bg: $white;
+$box_line: $line;
+
+// Logo Collapses
+$from_full_to_noslogan: 935px;
+$from_noslogan_to_icon: 640px;
+
+// header
+$head_bg: $box_bg;
+
+// search overlay
+$so_bg: rgba(white, .8);
+$so_color: black;
+
+// Menu
+$mainnav_collapse: 1068px;
+$mainnav_bg: $white;
+$mainnav_border: $line;
+$mainnav_text-transform: uppercase;
+$mainnav_a_color: $link-color;
+$mainnav_a_hover: $link-hover-color;
+$mainnav_a_hover_bg: $lightblue;
+$mainnav_responsive_text_align: center;
+$mainav_parent_plus_display: yes;
+
+// Post Pages
+$title_color: $blue;
+
+// author box
+$avatar_width: 150px;
+
+// widgets
+$widget_title_font-weight: light;
+
+// lightbox
+$lightbox_container_background: $black;
+
+// Tables
+$table-border-color: #d0d0d0 !default;
+$table-striped-color: #f2f2f2 !default;
+$table-collapse: 700px;

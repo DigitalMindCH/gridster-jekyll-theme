@@ -1,97 +1,26 @@
-html{
-    font: {
-        family: $main_font-family;
-        size: $root_font_size;
-        weight: $main_font-weight;
-    }
-    color: $main_color;
-}
 body{
-    @extend html;
-    line-height: $general_line-height;
-    background:{
-        color: $body_bg-color;
-        image: $body_bg-img;
-        attachment: fixed;
-        position: center;
-        repeat: repeat;
-    }
     transition: .3s all ease-in-out;
     @include flexbox(row, wrap, center, flex-start);
+    margin-top: 64px;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-weight: $h_font-weight;
-    text-transform: $h_text_transform;
-    line-height: 1;
-    padding: 10px 0px;
-}
 
-h1{
-    font-size: 2.1em;
-}
-
-h2{
-    font-size: 1.6em;
-}
-
-h3{
-    font-size: 1.2em;
-}
-
-h4{
-    font-size: 1em;
-}
-
-h5{
-    font-size: .83em;
-}
-
-h6{
-    font-size: .75em;
-}
-
-a{
-    transition: .3s all;
-    color: $a_color;
-    text-decoration: none;
-    border-bottom: $a_line;
-
-    &:hover{
-        transiton: .3s all;
-        color: $a_hover_color;
-        border-bottom: transparent 1px solid;
+// headings 
+@for $i from 1 through 6{
+    $fontsize: ($h1-fontsize + 0.64) - ($i * 0.64);
+    h#{$i}{
+        font-size: $fontsize; 
+        line-height: 1.1*$fontsize; 
+        margin: ($fontsize / 2) 0 ($fontsize / 2.5) 0;
+        a{
+            font-weight: inherit; 
+        }
     }
-
-    &.noline,
-    nav &{
-        border-bottom: $noborder;
-    }
-}
-
-img{
-    max-width: 100%;
-}
-
-iframe{
-    width: 100%;
-    height: auto;
 }
 
 // responsive video (Format 16:9)
 .video_container{
-    @include paddinghack(100%, 16, 9);
-
-    iframe{
-        @extend %paddinghack;
-    }
-}
-
-// content container
-.content{
-    width: $content_width;
-    max-width: $max_width;
-    @extend %center;
+    @include paddinghack(100%, 16, 9, "iframe");
 }
 
 .margin{
@@ -132,17 +61,127 @@ iframe{
     }
 }
 
-blockquote{
-    margin-left: 5%;
-    padding: 10px;
-    box-sizing: border-box;
-    border-left: $line;
-}
-
-code{
-    font-family: 'Source Code Pro', 'Courier New', monospace;
-}
-
 .featimg{
     width: 100%;
 }
+
+// Tables
+table, th, td {
+   border: none;
+}
+
+table {
+  width:100%;
+  display: table;
+
+  &.bordered tr {
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  &.striped {
+    tbody tr:nth-child(odd) {
+      background-color: $table-striped-color;
+    }
+  }
+
+  &.hoverable {
+
+    tbody tr {
+      transition: background-color .25s ease;
+      &:hover {
+        background-color: $table-striped-color;
+      }
+    }
+  }
+
+  &.centered {
+    thead tr th, tbody tr td {
+      text-align: center;
+
+    }
+  }
+
+}
+
+thead {
+  border-bottom: 1px solid $table-border-color;
+}
+
+td, th{
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+// Responsive Table
+@media screen and (max-width: $table-collapse){
+
+  table.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    position: relative;
+
+    th,
+    td {
+      margin: 0;
+      vertical-align: top;
+    }
+
+    th { text-align: left; }
+    thead {
+      display: block;
+      float: left;
+
+      tr {
+        display: block;
+        padding: 0 10px 0 0;
+
+        th::before {
+          content: "\00a0";
+        }
+      }
+    }
+    tbody {
+      display: block;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap;
+
+      tr {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    th {
+      display: block;
+      text-align: right;
+    }
+    td {
+      display: block;
+      min-height: 1.25em;
+      text-align: left;
+    }
+    tr { padding: 0 10px; }
+
+    /* sort out borders */
+    thead {
+      border: 0;
+      border-right: 1px solid $table-border-color;
+    }
+
+    &.bordered {
+      th { border-bottom: 0; border-left: 0; }
+      td { border-left: 0; border-right: 0; border-bottom: 0; }
+      tr { border: 0; }
+      tbody tr { border-right: 1px solid $table-border-color; }
+    }
+
+  }
+
+}
+

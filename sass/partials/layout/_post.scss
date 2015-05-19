@@ -35,7 +35,7 @@
         .category,
         .tags{
             .name{
-                font-weight: $medium;
+                font-weight: 500;
                 padding: 5px;
             }
         }
@@ -48,7 +48,7 @@
     }
 
     .post_nav{
-        @extend %clearfix;
+        @include clearfix();
         margin: 20px 0;
 
         a{

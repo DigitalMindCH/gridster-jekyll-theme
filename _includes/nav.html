@@ -4,6 +4,9 @@
             <a class="toggle_link noline"><i class="fa fa-close fa-lg"></i></a>
             <ul>
                 <li>
+                    <a href="{{ site.baseurl | replace: '//', '/' }}">{% include icon.html %}</a>
+                </li>
+                <li>
                     <a href="{{ site.baseurl | replace: '//', '/' }}/page">Page</a>
                 </li>
                 <li>
@@ -15,13 +18,12 @@
                 <li>
                     <a href="{{ site.baseurl | replace: '//', '/' }}/typography">Typography</a>
                 </li>
-                <li class="parent"><a href="#">Drop Example</a>
-                    <ul>
+                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Drop Example&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a></li>
+                <ul id="drop-example" class="dropdown-content">
                         <li><a href="/child1">child</a></li>
                         <li><a href="/child2">child</a></li>
                         <li><a href="/child3">child</a></li>
                     </ul>
-                </li>
             </ul>
         </nav>
         <nav class="iconnav">
