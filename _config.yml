@@ -27,7 +27,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "post-sidebar-left"
       type: "standard"
       homedisplay: "featimg"
 markdown: kramdown

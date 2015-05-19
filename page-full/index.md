@@ -1,5 +1,5 @@
 ---
-layout: page_full
+layout: page-full
 featimg: 6.jpg
 title: Page
 ---

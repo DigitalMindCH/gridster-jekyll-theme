@@ -8,11 +8,7 @@ $twotoone: 530px;
 
 .articles{
     @include flexbox(row, wrap, flex-start, stretch);
-    width: 75%;
-
-    @media screen and (max-width: $sidebarcollapse){
-        width: 100%;
-    }
+    width: 100%;
 
     @media screen and (max-width: $twotoone){
         justify-content: center;

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-sidebar-right
 featimg: 8.jpg
 title: Page
 ---

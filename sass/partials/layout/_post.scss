@@ -1,14 +1,4 @@
 .content_container{
-    width: 75%;
-
-    @media screen and (max-width: $sidebarcollapse){
-        width: 100%;
-    }
-
-    .full &{
-        width: 100%;
-    }
-
     .post_title{
         color: $title_color;
         padding: 10px 0;

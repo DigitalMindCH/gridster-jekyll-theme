@@ -1,11 +1,41 @@
+$sidebar-width: 280px;
+
 .sidebar{
-    width: calc(25% - 20px);
+    width: $sidebar-width;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 111;
+    @include shadow(1);
 
     @media screen and (max-width: $sidebarcollapse){
-        width: 100%;
 
-        .index &{
-            display: none;
-        }
+    }
+}
+
+.has-sidebar-left,
+.has-sidebar-right,
+.main_menu {
+    width: calc(100% - #{$sidebar-width});
+}
+
+.has-sidebar-left{
+    margin-left: $sidebar-width;
+    .main_menu{
+        margin-left: $sidebar-width;
+    }
+    .sidebar{
+        left: 0;
+    }
+}
+.has-sidebar-right{
+    margin-right: $sidebar-width;
+    .main_menu{
+        margin-right: $sidebar-width;
+    }
+    .sidebar{
+        right: 0;
     }
 }
