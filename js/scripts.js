@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    $('.sidebar-toggle').click(function(){
+        $('.sidebar').toggleClass('open');
+    });
+    
     // Back to top link
     $('.backtotop').click(function () {
         $('body,html').animate({
@@ -40,6 +44,8 @@ $(document).ready(function() {
         $('.switch').show();
     }});
 
+
+    
 
 $(window).scroll(function() {
     // scroll stuff

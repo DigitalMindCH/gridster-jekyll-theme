@@ -1,4 +1,6 @@
 $sidebar-width: 280px;
+$margin-width: 30px;
+$sidebar-stripe-bg: $accent-color;
 
 .sidebar{
     width: $sidebar-width;
@@ -9,33 +11,85 @@ $sidebar-width: 280px;
     background: white;
     z-index: 111;
     @include shadow(1);
-
+    transition: .3s all ease;
+    
+    .sidebar-toggle{
+        display: none;
+        transition: .5s all ease;
+    }
+    
     @media screen and (max-width: $sidebarcollapse){
-
+        transform: translateX(-($sidebar-width - $margin-width));
+        
+        &.open{
+            transition-delay: .5s;
+            transform: translateX(0);
+            
+            .sidebar-toggle{
+                transition-delay: .3s;
+                height: $margin-width;
+                background: rgba($sidebar-stripe-bg, 0);
+                i{
+                    transform: translate(50%, -50%) rotate(45deg);
+                }
+            }
+        }
+        
+        .sidebar-toggle{
+            display: block;
+            position: fixed;
+            top: 0;
+            left: $sidebar-width - $margin-width;
+            width: $margin-width;
+            height: 100%;
+            background: $sidebar-stripe-bg;
+            
+            &:hover{
+                cursor: pointer;
+                background: darken($sidebar-stripe-bg, 7%);
+            }
+            
+            i{
+                transition: 1s all ease;
+                position: absolute;
+                right: $margin-width/2;
+                top: 50%;
+                transform: translate(50%, -50%);
+            }
+        }    
     }
 }
 
 .has-sidebar-left,
 .has-sidebar-right,
 .main_menu {
-    width: calc(100% - #{$sidebar-width});
+    width: 100%;
+    @media screen and (min-width: $sidebarcollapse + 1){
+        width: calc(100% - #{$sidebar-width});
+    }
 }
 
 .has-sidebar-left{
-    margin-left: $sidebar-width;
-    .main_menu{
+    @media screen and (min-width: $sidebarcollapse + 1){
         margin-left: $sidebar-width;
-    }
-    .sidebar{
-        left: 0;
+        
+        .main_menu{
+            margin-left: $sidebar-width;
+        }
+        .sidebar{
+            left: 0;
+        }
     }
 }
+
 .has-sidebar-right{
-    margin-right: $sidebar-width;
-    .main_menu{
+    @media screen and (min-width: $sidebarcollapse + 1){
         margin-right: $sidebar-width;
-    }
-    .sidebar{
-        right: 0;
+        .main_menu{
+            margin-right: $sidebar-width;
+        }
+        .sidebar{
+            right: 0;
+        }
     }
 }
