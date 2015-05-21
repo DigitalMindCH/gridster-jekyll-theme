@@ -7,7 +7,7 @@ $threetotwo: 775px;
 $twotoone: 530px;
 
 .articles{
-    @include flexbox(row, wrap, flex-start, stretch);
+    @include flexbox(row, wrap, flex-start, flex-start);
     width: 100%;
 
     @media screen and (max-width: $twotoone){

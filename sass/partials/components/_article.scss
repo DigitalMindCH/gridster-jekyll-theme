@@ -1,8 +1,9 @@
 article{
+    @include shadow(1);
+    border-radius: 2px;
     box-sizing: border-box;
-    background: $box_bg;
+    background: $white;
     margin-bottom: 20px;
-    border: $box_line;
     position: relative;
 
     .content_container &{
@@ -16,7 +17,7 @@ article{
     .index & h1,
     .index & p,
     .index & span{
-        padding: 10px;
+        padding: 0 20px;
     }
 
     img{
@@ -43,15 +44,6 @@ article{
         .index &{
             font-size: .7em;
             opacity: .6;
-            position: absolute;
-            bottom: 10px;
-            left: 5px;
-        }
-    }
-
-    .post_content{
-        .index &{
-            padding-bottom: 50px;
         }
     }
 

@@ -1,5 +1,6 @@
 name: Twister
 description: a powerful jekyll theme
+destination: jekyllbuild
 url: #place url
 baseurl: #place folder name if site is served in subfolder
 permalink: /:title/
@@ -35,7 +36,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 relative_permalinks: false
-exclude: [.git, .gitignore, sass, .sass-cache, package.json, gruntfile.js, node_modules, README.md, documentation]
+exclude: [.git, .gitignore, sass, .sass-cache, package.json, gruntfile.js, node_modules, README.md, jekyllbuild]
 
 # prose.io configurations
 prose:

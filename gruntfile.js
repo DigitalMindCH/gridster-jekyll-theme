@@ -124,7 +124,7 @@ module.exports = function(grunt) {
                 livereload: true
             },
             site: {
-                files: ["*.html", "**/*.html", "*.md", "**/*.md", "**/*.yml", "*.yml", "!_site/*.*", "!_site/**/*.*", "!documentation/*.*", "!documentation/**/*.*"],
+                files: ["*.html", "**/*.html", "*.md", "**/*.md", "**/*.yml", "*.yml", "!jekyllbuild/*.*", "!jekyllbuild/**/*.*", "!node_modules/{,*/}*.*"],
                 tasks: ["shell:jekyllBuild"]
             },
             js: {
@@ -144,10 +144,10 @@ module.exports = function(grunt) {
 
         buildcontrol: {
             options: {
-                dir: '_site',
+                dir: 'jekyllbuild',
                 commit: true,
                 push: true,
-                message: 'Built _site from commit %sourceCommit% on branch %sourceBranch%'
+                message: 'Built jekyllbuild from commit %sourceCommit% on branch %sourceBranch%'
             },
             pages: {
                 options: {

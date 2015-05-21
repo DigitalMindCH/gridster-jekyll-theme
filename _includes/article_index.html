@@ -44,14 +44,12 @@
                 </a>
         {% endif %}
     {% endif %}
-    {% if post.category %}
-        <span class="category">
-            {{ post.category }}
-        </span>
-    {% endif %}
+    <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
         <h1>{{ post.title }}</h1>
     </a>
     <p class="post_content">{{ post.content | strip_html | truncatewords: 15 }}</p>
-    <span class="date"><i class="fa fa-calendar"></i> {{ post.date | date: '%B %d, %Y' }}</span>
+    <p class="actions">
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">Read More</a>
+    </p>
 </article>
