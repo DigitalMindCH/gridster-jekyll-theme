@@ -44,9 +44,9 @@ $inlcude-WordPress-kit: no;
 // color variables (use colors as values)
 //----------------------------------------
 
-$main-color: $black;
-$link-color: $dm-blue;
-$link-hover-color: $accent;
+$main-color: $primary-text;
+$link-hover-color: $accent-color;
+$link-color: $dark-primary-color;
 
 // String Variables (use strings as values | for Font Variables: Don't forget to include the fonts)
 //------------------------------------------
@@ -159,3 +159,11 @@ $lightbox_container_background: $black;
 $table-border-color: #d0d0d0 !default;
 $table-striped-color: #f2f2f2 !default;
 $table-collapse: 700px;
+
+// shortcuts
+$line: 1px solid rgba(160,160,160,.2);
+
+// sidebar
+$sidebar-width: 280px;
+$margin-width: 30px;
+$sidebar-stripe-bg: $accent-color;

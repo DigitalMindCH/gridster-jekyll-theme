@@ -21,12 +21,14 @@ $twotoone: 530px;
             @include rowMachine(3, 1%, 25px);
         }
 
-        @media screen and (max-width: $threetotwo){
+        @media screen and (max-width: $threetotwo) and (min-width: $twotoone + 1){
             @include rowMachine(2, 3%, 25px);
         }
 
         @media screen and (max-width: $twotoone){
-            @include rowMachine(1, 0, 25px);
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 25px;
         }
     }
 }

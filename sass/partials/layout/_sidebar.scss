@@ -1,8 +1,4 @@
-$sidebar-width: 280px;
-$margin-width: 30px;
-$sidebar-stripe-bg: $accent-color;
-
-.sidebar{
+.sidebar {
     width: $sidebar-width;
     height: 100%;
     position: fixed;
@@ -10,32 +6,28 @@ $sidebar-stripe-bg: $accent-color;
     left: 0;
     background: white;
     z-index: 111;
+    overflow-y: auto;
     @include shadow(1);
     transition: .3s all ease;
-    
-    .sidebar-toggle{
+    .sidebar-toggle {
         display: none;
         transition: .5s all ease;
     }
-    
-    @media screen and (max-width: $sidebarcollapse){
+    @media screen and (max-width: $sidebarcollapse) {
         transform: translateX(-($sidebar-width - $margin-width));
-        
-        &.open{
+        &.open {
             transition-delay: .5s;
             transform: translateX(0);
-            
-            .sidebar-toggle{
+            .sidebar-toggle {
                 transition-delay: .3s;
                 height: $margin-width;
                 background: rgba($sidebar-stripe-bg, 0);
-                i{
+                i {
                     transform: translate(50%, -50%) rotate(45deg);
                 }
             }
         }
-        
-        .sidebar-toggle{
+        .sidebar-toggle {
             display: block;
             position: fixed;
             top: 0;
@@ -43,53 +35,60 @@ $sidebar-stripe-bg: $accent-color;
             width: $margin-width;
             height: 100%;
             background: $sidebar-stripe-bg;
-            
-            &:hover{
+            &:hover {
                 cursor: pointer;
                 background: darken($sidebar-stripe-bg, 7%);
             }
-            
-            i{
+            i {
                 transition: 1s all ease;
                 position: absolute;
                 right: $margin-width/2;
                 top: 50%;
                 transform: translate(50%, -50%);
             }
-        }    
+        }
     }
 }
 
 .has-sidebar-left,
-.has-sidebar-right,
-.main_menu {
-    width: 100%;
-    @media screen and (min-width: $sidebarcollapse + 1){
-        width: calc(100% - #{$sidebar-width});
-    }
-}
-
-.has-sidebar-left{
-    @media screen and (min-width: $sidebarcollapse + 1){
-        margin-left: $sidebar-width;
-        
-        .main_menu{
-            margin-left: $sidebar-width;
-        }
-        .sidebar{
-            left: 0;
-        }
-    }
-}
-
 .has-sidebar-right{
-    @media screen and (min-width: $sidebarcollapse + 1){
-        margin-right: $sidebar-width;
-        .main_menu{
-            margin-right: $sidebar-width;
+    &,
+    .main_menu {
+        width: calc(100% - #{$sidebar-width});
+        @media screen and (max-width: $sidebarcollapse) {
+            width: calc(100% - #{$margin-width});
         }
-        .sidebar{
-            right: 0;
+    }
+}
+
+.has-sidebar-left {
+    margin-left: $sidebar-width;
+    .main_menu {
+        margin-left: $sidebar-width;
+    }
+    .sidebar {
+        left: 0;
+    }
+    @media screen and (max-width: $sidebarcollapse) {
+        margin-left: $margin-width;
+        .main_menu {
+            margin-left: $margin-width;
+        }
+    }
+}
+
+.has-sidebar-right {
+    margin-right: $sidebar-width;
+    .main_menu {
+        margin-right: $sidebar-width;
+    }
+    .sidebar {
+        right: 0;
+    }
+    @media screen and (max-width: $sidebarcollapse) {
+        margin-right: $margin-width;
+        .main_menu {
+            margin-right: $margin-width;
         }
     }
 }

@@ -14,28 +14,34 @@
             {% endif %}
         {% elsif post.type == "audio" %}
             {% if post.audio-embed %}
-                {{ post.audio-embed }}
+                <div class="video_container">
+                    {{ post.audio-embed }}
+                </div>
             {% endif %}
         {% else %}
             {% if post.featimg %}
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
-                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ post.featimg }}" alt="{{ post.featimg }}">
+                    {% if post.featimg contains '.png'%}
+                    {% assign thumb = post.featimg | replace: '.png', '' %}
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
+                    {% elsif post.featimg contains '.jpg'%}
+                    {% assign thumb = post.featimg | replace: '.jpg', '' %}
+                        <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
+                    {% endif %}
                 </a>
             {% endif %}
         {% endif %}
     {% else %}
-        {% if post.type == "youtube" %}
-            {% if post.yt-video-id %}
+        {% if post.featimg %}
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
-                    <img src="http://img.youtube.com/vi/{{ post.yt-video-id }}/0.jpg" alt="{{ post.title }} thumbnail">
+                    {% if post.featimg contains '.png'%}
+                    {% assign thumb = post.featimg | replace: '.png', '' %}
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.png' }}" alt="{{ thumb }}">
+                    {% elsif post.featimg contains '.jpg'%}
+                    {% assign thumb = post.featimg | replace: '.jpg', '' %}
+                        <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
+                    {% endif %}
                 </a>
-            {% endif %}
-        {% else %}
-            {% if post.featimg %}
-                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
-                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ post.featimg }}" alt="{{ post.featimg }}">
-                </a>
-            {% endif %}
         {% endif %}
     {% endif %}
     {% if post.category %}

@@ -4,6 +4,86 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        imagemin: {
+            png: {
+                options: {
+                    optimizationLevel: 7
+                },
+                files: [
+                    {
+                        // Set to true to enable the following options…
+                        expand: true,
+                        // cwd is 'current working directory'
+                        cwd: '',
+                        src: ['img/*.png', 'img/**/*.png', 'img/**/**/*.png'],
+                        // Could also match cwd line above. i.e. project-directory/img/
+                        dest: 'media/compressed/',
+                        flatten: true,
+                        ext: '.png'
+                    }
+                ]
+            },
+            jpg: {
+                options: {
+                    progressive: true
+                },
+                files: [
+                    {
+                        // Set to true to enable the following options…
+                        expand: true,
+                        // cwd is 'current working directory'
+                        cwd: '',
+                        src: ['img/*.jpg', 'img/**/*.jpg', 'img/**/**/*.jpg', 'img/*.jpeg', 'img/**/*.jpeg', 'img/**/**/*.jpeg'],
+                        // Could also match cwd. i.e. project-directory/img/
+                        dest: 'media/compressed/',
+                        flatten: true,
+                        ext: '.jpg'
+                    }
+                ]
+            }
+        },
+
+        responsive_images: {
+            square:{
+                options: {
+                    sizes: [{
+                        width: 450,
+                        height: 450,
+                        aspectRatio: false,
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: [
+                        'media/compressed/*.{jpg,gif,png}',
+                        'media/compressed/!crops/*.{jpg,gif,png}',
+                    ],
+                    cwd: '',
+                    dest: 'media/compressed/crops/450x450/'
+                }]
+            },
+            thumbs:{
+                options: {
+                    sizes: [{
+                        width: 450,
+                        height: 253,
+                        aspectRatio: false,
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: [
+                        'media/compressed/*.{jpg,gif,png}',
+                        'media/compressed/!crops/*.{jpg,gif,png}',
+                    ],
+                    cwd: '',
+                    dest: 'media/compressed/crops/450x253/'
+                }]
+            }
+        },
+
         uglify: {
             build: {
                 src: 'js/*.js',
@@ -33,6 +113,12 @@ module.exports = function(grunt) {
             },
         },
 
+        open: {
+            build: {
+                path: 'http://localhost:4000',
+            }
+        },
+
         watch: {
             options: {
                 livereload: true
@@ -48,7 +134,12 @@ module.exports = function(grunt) {
             css: {
                 files: ["sass/*.scss", "sass/partials/*.scss", "sass/partials/components/*.scss", "sass/partials/layout/*.scss", "sass/modules/*.scss"],
                 tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
+            },
+            images: {
+                files: ["img/{,*/}{,*/}*.{png,jpg}"],
+                tasks: ["newer:imagemin", "responsive_images", "shell:jekyllBuild"]
             }
+
         },
 
         buildcontrol: {
@@ -77,16 +168,9 @@ module.exports = function(grunt) {
     });
 
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-build-control');
-
-    // Default task(s).
+    require('load-grunt-tasks')(grunt);
 
     grunt.registerTask("serve", ["shell:jekyllServe"]);
-    grunt.registerTask("default", ["sass", "autoprefixer", "shell:jekyllBuild", "watch"]);
+    grunt.registerTask("default", ["newer:imagemin", "responsive_images", "sass", "autoprefixer", "shell:jekyllBuild", "open", "watch"]);
     grunt.registerTask("deploy", ["buildcontrol:pages"]);
 };
