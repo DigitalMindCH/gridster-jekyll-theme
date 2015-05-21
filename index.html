@@ -11,17 +11,17 @@ description: the good site of life
         <!-- link to first page -->
         {% if paginator.total_pages > 3 %}
             {% if paginator.page == 1 %}
-                <span class="disabled"><i class="fa fa-angle-double-left"></i></span>
+                <span class="btn disabled"><i class="fa fa-angle-double-left"></i></span>
             {% else %}
-                <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-double-left"></i></a>
+                <a class="btn" href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-double-left"></i></a>
             {% endif %}
         {% endif %}
 
         <!-- previous link -->
         {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i></a>
+            <a class="btn" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i></a>
         {% else %}
-            <span class="disabled"><i class="fa fa-angle-left"></i></span>
+            <span class="btn disabled"><i class="fa fa-angle-left"></i></span>
         {% endif %}
 
         <!-- number links -->
@@ -31,25 +31,25 @@ description: the good site of life
 
         {% for i in (1..paginator.total_pages) limit: 5 offset: start %}
             {% if i == paginator.page %}
-                <span class="disabled">{{ i }}</span>
+                <span class="btn disabled">{{ i }}</span>
             {% else %}
-                <a href="/page/{{ i }}">{{ i }}</a>
+                <a class="btn" href="/page/{{ i }}">{{ i }}</a>
             {% endif %}
         {% endfor %}
 
         <!-- next link -->
         {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-right"></i></a>
+            <a class="btn" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-right"></i></a>
         {% else %}
-            <span class="disabled"><i class="fa fa-angle-right"></i></span>
+            <span class="btn disabled"><i class="fa fa-angle-right"></i></span>
         {% endif %}
 
         <!-- last page link -->
         {% if paginator.total_pages > 3 %}
             {% if paginator.page == paginator.total_pages %}
-                <span class="disabled"><i class="fa fa-angle-double-right"></i></span>
+                <span class="btn disabled"><i class="fa fa-angle-double-right"></i></span>
             {% else %}
-                <a href="{{ site.baseurl | replace: '//', '/' }}/page/{{paginator.total_pages}}"><i class="fa fa-angle-double-right"></i></a>
+                <a class="btn" href="{{ site.baseurl | replace: '//', '/' }}/page/{{paginator.total_pages}}"><i class="fa fa-angle-double-right"></i></a>
             {% endif %}
         {% endif %}
     </div>

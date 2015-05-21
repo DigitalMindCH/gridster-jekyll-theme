@@ -7,10 +7,10 @@
     }
 
     .meta{
-        margin: 20px 0;
-        padding: 10px 0;
-        border-top: $box_line;
+        padding: 5px 0;
+        margin-bottom: 5px;
         border-bottom: $box_line;
+        color: $secondary-text;
     }
 
     .featsection{
@@ -18,36 +18,21 @@
     }
 
     .catsandtags{
-        margin: 20px 0;
         padding: 10px 0;
-        border-top: $box_line;
-        border-bottom: $box_line;
         line-height: 2.5;
-
+        color: $secondary-text;
+        
         .category,
         .tags{
             .name{
                 font-weight: 500;
-                padding: 5px;
             }
-        }
-
-        a{
-            padding: 5px;
-            background: $box_bg;
-            border: $box_line;
         }
     }
 
     .post_nav{
         @include clearfix();
         margin: 20px 0;
-
-        a{
-            padding: 5px 10px;
-            border: $line;
-            background: $white;
-        }
 
         .prev{
             float: left;

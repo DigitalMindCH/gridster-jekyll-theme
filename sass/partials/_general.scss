@@ -4,6 +4,13 @@ body{
     margin-top: 64px;
 }
 
+.btn{
+  @include button($accent-color, btn);
+}
+
+.btn-flat{
+  @include button($accent-color, flat);
+}
 
 // headings 
 @for $i from 1 through 6{

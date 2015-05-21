@@ -32,8 +32,6 @@ article{
 
     .category,
     .tags {
-        text-transform: uppercase;
-
         .index &{
             font-size: .7em;
             opacity: .6;
@@ -72,11 +70,6 @@ article{
 
 .short{
     width: 100%;
-    border-bottom: $box_line;
-
-    &:hover{
-       background: darken($box_bg, 3%);
-    }
 
     a{
         display: block;
