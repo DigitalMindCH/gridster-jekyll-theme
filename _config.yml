@@ -4,7 +4,7 @@ destination: jekyllbuild
 url: #place url
 baseurl: #place folder name if site is served in subfolder
 permalink: /:title/
-paginate: 8
+paginate: 3
 paginate_path: /page/:num/
 tag_dir: /tag
 category_dir: /category
@@ -28,7 +28,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post-sidebar-left"
+      layout: "post-material-sidebar-left"
       type: "standard"
       homedisplay: "featimg"
 markdown: kramdown

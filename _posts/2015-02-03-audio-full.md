@@ -8,7 +8,7 @@ title: Audio Full
 tags: [music, soundcloud]
 category: [audio]
 ---
-This audio post is displays without a sidebar and has a featured image set for the index pages.
+This audio post is displays without a material-sidebar and has a featured image set for the index pages.
 
 For the audio post to work, type must be set to audio and the audio-embed filled with an iframe.
 

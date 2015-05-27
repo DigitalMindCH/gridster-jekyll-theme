@@ -33,13 +33,6 @@ body{
 .margin{
     padding-top: 50px;
     width: 100%;
-    .content{
-        @include flexbox(row, wrap, space-between, stretch);
-
-        @media screen and (max-width: $sidebarcollapse){
-            @include flexbox(column, wrap, flex-start, center);
-        }
-    }
 }
 
 // 404 error msg

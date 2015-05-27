@@ -1,4 +1,54 @@
-.sidebar {
+.classic-sidebar{
+    width: $sidebar-width;
+    background: white;
+    @include shadow(1);
+    
+    @media screen and (max-width: $sidebarcollapse){
+        width: 100%;
+        margin-bottom: $margin-width;
+    }
+}
+
+.has-classic-sidebar-left{    
+    .content{
+        @include flexbox(row-reverse, wrap, space-between, flex-start);
+        .content_container,
+        .articles{
+            $subs: $margin-width + $sidebar-width;
+            width: calc(100% - #{$subs});
+        }
+
+        @media screen and (max-width: $sidebarcollapse){
+            @include flexbox(column, wrap, flex-start, center);
+            .content_container,
+            .articles{
+                width: 100%;
+                margin-bottom: $margin-width;
+            }
+        }
+    }
+}
+.has-classic-sidebar-right{
+    .content{
+        @include flexbox(row, wrap, space-between, flex-start);
+        .content_container,
+        .articles{
+            $subs: $margin-width + $sidebar-width;
+            width: calc(100% - #{$subs});
+        }
+
+        @media screen and (max-width: $sidebarcollapse){
+            @include flexbox(column, wrap, flex-start, center);
+            .content_container,
+            .articles{
+                width: 100%;
+                margin-bottom: $margin-width;
+            }
+        }
+    }    
+}
+
+.material-sidebar {
     width: $sidebar-width;
     height: 100%;
     position: fixed;
@@ -8,6 +58,16 @@
     overflow-y: auto;
     @include shadow(1);
     transition: .3s all ease;
+    
+    .row{
+        padding: 20px;
+        border-bottom: $line;
+        
+        .ts_no_slogan,
+        .ts_icon{
+            display: none;
+        }
+    }
     .sidebar-toggle {
         display: none;
         transition: .5s all ease;
@@ -49,8 +109,8 @@
     }
 }
 
-.has-sidebar-left,
-.has-sidebar-right{
+.has-material-sidebar-left,
+.has-material-sidebar-right{
     &,
     .main_menu {
         width: calc(100% - #{$sidebar-width});
@@ -60,12 +120,12 @@
     }
 }
 
-.has-sidebar-left {
+.has-material-sidebar-left {
     margin-left: $sidebar-width;
     .main_menu {
         margin-left: $sidebar-width;
     }
-    .sidebar {
+    .material-sidebar {
         left: 0;
     }
     @media screen and (max-width: $sidebarcollapse) {
@@ -76,12 +136,12 @@
     }
 }
 
-.has-sidebar-right {
+.has-material-sidebar-right {
     margin-right: $sidebar-width;
     .main_menu {
         margin-right: $sidebar-width;
     }
-    .sidebar {
+    .material-sidebar {
         right: 0;
     }
     @media screen and (max-width: $sidebarcollapse) {

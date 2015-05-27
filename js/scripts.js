@@ -31,7 +31,7 @@ $(document).ready(function() {
     });
 
     // Style Switch
-    $(".switch span").click(function(){
+    $(".switch div").click(function(){
         var id = $(this).attr("id");
 
         // adjust link here
