@@ -28,14 +28,21 @@
         width: 10px;
         transform: scale(4);
         
+        &:hover{
+            background-color: rgba(0, 0, 0, .1);
+        }
         .icon{
             transition: .3s all ease;
             fill: white;
-            stroke: black;
+            .lines{
+                stroke: $primary-color;
+            }
             
             &:hover{
-                fill: black;
-                stroke: white;
+                fill: white;
+                .lines{
+                    stroke: $primary-color;
+                }
             }
         }
     }

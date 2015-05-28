@@ -1,19 +1,22 @@
 // Logo SVG styling
 
 .icon{
-    fill:$dark-primary-color;
-    fill-rule:nonzero;
-    stroke:$light-primary-color;
-    stroke-width:0.05;
-    stroke-miterlimit:4;
-    stroke-opacity:0.94117647;
-    stroke-dasharray:none;
-    transition: .3s all ease;
+    fill:$dark-primary-color;    
+    .lines{
+        stroke: white;
+        stroke-width:3;
+        stroke-linecap:butt;
+        stroke-linejoin:miter;
+        stroke-miterlimit:4;
+    }
+    .rectangle{
+        // fill: $dark-primary-color;
+    }
 }
 
-.twister{
-    font-size:25px;
-    font-weight: light;
+.gridster{
+    font-size:104.73602295px;
+    font-weight: bold;
     line-height:125%;
     fill:$primary-text;
     font-family: $main-font;
@@ -22,8 +25,8 @@
 }
 
 .slogan{
-    font-size:7px;
-    font-weight:200;
+    font-size:30px;
+    font-weight:300;
     line-height:125%;
     fill:$accent-color;
     font-family: $main-font;
@@ -34,7 +37,6 @@ a:hover{
     svg{
         .icon{
             fill:$accent-color;
-            stroke:$primary-text;
         }
 
         .twister{
