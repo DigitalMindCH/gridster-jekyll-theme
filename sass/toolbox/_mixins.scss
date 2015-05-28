@@ -14,7 +14,7 @@
     
     @if $prop == btn{
         text-decoration:none;
-        color: black-or-white($color);
+        color: white;
         background-color: $color;
         text-align: center;
         letter-spacing: .5px;
@@ -24,7 +24,7 @@
 
         &:hover {
             background-color: lighten($color, 5%);
-            color: black-or-white(lighten($color, 5%));
+            color: white;
             @include shadow(1-half);
         }
       

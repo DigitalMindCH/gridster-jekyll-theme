@@ -62,7 +62,7 @@
         display: block;
         width: 25px;
         height: 25px;
-        background: black-or-white($accent-color);
+        background: white;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -88,7 +88,7 @@
     }
     &:hover{
         span{
-            background: black-or-white(lighten($accent-color, 5%));
+            background: white;
             &:before,
             &:after{
                 background: lighten($accent-color, 5%);                
@@ -104,7 +104,7 @@
         display: block;
         width: 25px;
         height: 25px;
-        background: black-or-white($accent-color);
+        background: white;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -130,7 +130,7 @@
     
     &:hover{
         span{
-            background: black-or-white(lighten($accent-color, 5%));
+            background: white;
             &:before,
             &:after{
                 background: lighten($accent-color, 5%);                

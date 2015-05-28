@@ -116,8 +116,8 @@ $body_bg-img: url(/img/swirl.jpg); // adjust if you use baseurl, place this befo
 
 $sidebarcollapse: 1330px;
 
-$layoutswitch_a_color: $blue;
-$layoutswitch_a_hover_color: $green;
+$layoutswitch_a_color: $primary-color;
+$layoutswitch_a_hover_color: $accent-color;
 $box_bg: $white;
 $box_line: $line;
 
@@ -139,12 +139,12 @@ $mainnav_border: $line;
 $mainnav_text-transform: uppercase;
 $mainnav_a_color: $link-color;
 $mainnav_a_hover: $link-hover-color;
-$mainnav_a_hover_bg: $lightblue;
+$mainnav_a_hover_bg: $light-primary-color;
 $mainnav_responsive_text_align: center;
 $mainav_parent_plus_display: yes;
 
 // Post Pages
-$title_color: $blue;
+$title_color: $primary-color;
 
 // author box
 $avatar_width: 150px;

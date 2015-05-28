@@ -1,9 +1,9 @@
 // Logo SVG styling
 
 .icon{
-    fill:$blue;
+    fill:$dark-primary-color;
     fill-rule:nonzero;
-    stroke:$lightblue;
+    stroke:$light-primary-color;
     stroke-width:0.05;
     stroke-miterlimit:4;
     stroke-opacity:0.94117647;
@@ -15,7 +15,7 @@
     font-size:25px;
     font-weight: light;
     line-height:125%;
-    fill:$coal;
+    fill:$primary-text;
     font-family: $main-font;
     text-transform: uppercase;
     transition: .3s all ease;
@@ -25,7 +25,7 @@
     font-size:7px;
     font-weight:200;
     line-height:125%;
-    fill:$magenta;
+    fill:$accent-color;
     font-family: $main-font;
     transition: .3s all ease;
 }
@@ -33,16 +33,16 @@
 a:hover{
     svg{
         .icon{
-            fill:$magenta;
-            stroke:$coal;
+            fill:$accent-color;
+            stroke:$primary-text;
         }
 
         .twister{
-            fill:$blue;
+            fill:$dark-primary-color;
         }
 
         .slogan{
-            fill:$lightblue;
+            fill:$light-primary-color;
         }
     }
 }
