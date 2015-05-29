@@ -1,3 +1,32 @@
+// lighbox container in post
+.masonry{
+    @include flexbox(row, wrap, flex-start, flex-start);
+    width: 100%;
+    box-sizing: border-box;
+    background: $lightbox-container-background;
+
+    a{
+        width: calc((100% / 3) - 20px );
+        padding: 0;
+        margin: 10px;
+        line-height: 0;
+        font-size: 0;
+
+        img{
+            width: 100%;
+            opacity: .8;
+        }
+
+        &:hover{
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+// actual lightbox styles
 @keyframes clockwise {
   0%  { transform: rotate(0deg) }
   100%{ transform: rotate(360deg) }
@@ -6,6 +35,11 @@
 @keyframes anticlockwise {
   0%  { transform: rotate(360deg) }
   100%{ transform: rotate(0deg) }
+}
+
+@keyframes fade-in {
+    from	{ opacity: 0; }
+    to		{ opacity: 1; }
 }
 
 #imagelightbox {
@@ -174,11 +208,6 @@
     animation: fade-in .25s linear;
 }
 
-@keyframes fade-in {
-    from	{ opacity: 0; }
-    to		{ opacity: 1; }
-}
-
 @media only screen and (max-width: 41.250em) {
     #container{
         width: 100%;
@@ -215,31 +244,5 @@
 
     .imagelightbox-arrow-right {
         right: 0;
-    }
-}
-
-.masonry{
-    @include flexbox(row, wrap, flex-start, flex-start);
-    width: 100%;
-    box-sizing: border-box;
-    background: $lightbox-container-background;
-
-    a{
-        width: calc((100% / 3) - 20px );
-        padding: 0;
-        margin: 10px;
-        line-height: 0;
-        font-size: 0;
-
-        img{
-            width: 100%;
-            opacity: .8;
-        }
-
-        &:hover{
-            img{
-                opacity: 1;
-            }
-        }
     }
 }

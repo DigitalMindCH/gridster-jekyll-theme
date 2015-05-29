@@ -14,7 +14,7 @@ body{
   @include button($accent-color, flat);
 }
 
-// headings 
+// headings. Because that's faster than writing each of them separately.
 @for $i from 1 through 6{
     $fontsize: ($h1-fontsize + 0.64) - ($i * 0.64);
     h#{$i}{
@@ -37,6 +37,13 @@ body{
     width: 100%;
 }
 
+// footnotes
+.footnotes{
+    border-top: $line;
+    font-size: .9em;
+    margin-top: 40px;
+}
+
 // 404 error msg
 .error{
     width: 100%;
@@ -45,6 +52,7 @@ body{
     box-sizing: border-box;
 }
 
+// archive styles
 .archive{
     article & {
         list-style: none;
@@ -65,6 +73,7 @@ body{
     width: 100%;
 }
 
+// tables and modals are both taken pretty much entirely from http://materializecss.com
 // Tables
 table,
 th,
@@ -168,13 +177,6 @@ th {
             border-right: 1px solid $table-border-color;
         }
     }
-}
-
-
-.footnotes{
-    border-top: $line;
-    font-size: .9em;
-    margin-top: 40px;
 }
 
 // modals

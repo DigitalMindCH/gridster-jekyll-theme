@@ -11,6 +11,7 @@
     background: $head-bg;
     z-index: 20;
 
+    // logo media queries
     @media screen and (min-width: $from-full-to-noslogan){
         .ts-no-slogan,
         .ts-icon{
@@ -68,21 +69,6 @@
             font-weight: bold;
             text-transform: uppercase;
             transition: .3s all ease-in-out;
-        }
-    }
-
-    // header style on scroll
-    .shrink{
-        padding: 0px 10px;
-        box-sizing: border-box;
-
-        .logo{
-            transform: translate(-50%, -50%) scale(0);
-        }
-
-        .title{
-            font-size: 1em;
-            transform: translate(-50%, -50%) scale(1);
         }
     }
 }

@@ -1,5 +1,3 @@
-$authorbox-collapse: 510px;
-
 .authorbox{
     @include flexbox(row, wrap, flex-start, flex-start);
     @include shadow(1);
@@ -9,7 +7,6 @@ $authorbox-collapse: 510px;
     margin-bottom: 20px;
     background: white;
     
-
     .avatar {
         padding-right: 20px;
         max-width: $avatar-width;

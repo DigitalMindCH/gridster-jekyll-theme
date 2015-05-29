@@ -1,4 +1,4 @@
-// Style switcher on index pages
+// Layout switcher on index pages
 .switch{
     width: 100%;
     font-size: .8em;
@@ -47,6 +47,7 @@
     }
 }
 
+// layoutswitch buttons
 #grid{
     @include button($accent-color, btn);
     span {
