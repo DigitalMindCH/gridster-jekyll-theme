@@ -1,7 +1,7 @@
 <div class="sidebar classic-sidebar">
     <div class="widget">
         <h3 class="title">Categories</h3>
-        <ul class="category_list">
+        <ul class="category-list">
             {% assign category_list = site.categories %}
             {% if category_list.first[0] == null %}
                 {% for category in category_list %}
@@ -17,7 +17,7 @@
     </div>
     <div class="widget">
         <h3 class="title">Tags</h3>
-        <ul class="tag_list">
+        <ul class="tag-list">
             {% assign tag_list = site.tags %}
             {% if tag_list.first[0] == null %}
                 {% for tag in tag_list %}
@@ -34,7 +34,7 @@
 
     <div class="widget">
         <h3 class="title">Authors</h3>
-        <ul class="author_list">
+        <ul class="author-list">
             {% for author in site.data.authors %}
                 <li>
                     <a href="{{ site.author_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ author.id }}">

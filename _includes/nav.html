@@ -1,10 +1,10 @@
-<section class="main_menu">
+<section class="main-menu">
     <div class="content">
         <nav id="menu">
-            <a class="toggle_link noline"><i class="fa fa-close fa-lg"></i></a>
+            <a class="toggle-link noline"><i class="fa fa-close fa-lg"></i></a>
             <ul>
                 <li>
-                    <a href="{{ site.baseurl | replace: '//', '/' }}">{% include icon.html %}</a>
+                    <a href="{{ site.baseurl | replace: '//', '/' }}/">{% include icon.html %}</a>
                 </li>
                 <li>
                     <a href="{{ site.baseurl | replace: '//', '/' }}/archive">Archive</a>
@@ -12,14 +12,28 @@
                 <li>
                     <a href="{{ site.baseurl | replace: '//', '/' }}/typography">Typography</a>
                 </li>
-                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a></li>
+                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                </li>
                 <ul id="drop-example" class="dropdown-content">
-                        <li><a href="/page-full">page-full</a></li>
-                        <li><a href="/page-classic-sidebar-right">page classic sidebar right</a></li>
-                        <li><a href="/page-classic-sidebar-left">page classic sidebar left</a></li>
-                        <li><a href="/page-material-sidebar-right">page material sidebar right</a></li>
-                        <li><a href="/page-material-sidebar-left">page material sidebar left</a></li>
-                    </ul>
+                    <li>
+                        <a href="/page-full">page-full</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-right">page classic sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-left">page classic sidebar left</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-right">page material sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-left">page material sidebar left</a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="#colorswitch" class="modal-trigger"><i class="fa fa-cog"></i></a>
+                </li>
             </ul>
         </nav>
         <nav class="iconnav">
@@ -28,55 +42,60 @@
                     <a href='#search'><i class='fa fa-search'></i></a>
                 </li>
                 {% if site.tumblr %}
-                    <li class="social">
-                        <a href="{{ site.tumblr }}" class="tumblr"><i class="fa fa-tumblr"></i></a>
-                    </li>
-                {% endif %}
-                {% if site.pinterest %}
-                    <li class="social">
-                        <a href="{{ site.pinterest }}" class="pinterest"><i class="fa fa-pinterest"></i></a>
-                    </li>
-                {% endif %}
-
-                {% if site.instagram %}
-                    <li class="social">
-                        <a href="{{ site.instagram }}" class="instagram"><i class="fa fa-instagram"></i></a>
-                    </li>
-                {% endif %}
-
-                {% if site.twitter %}
-                    <li class="social">
-                        <a href="{{ site.twitter }}" class="twitter"><i class="fa fa-twitter"></i></a>
-                    </li>
-                {% endif %}
-
-                {% if site.facebook %}
-                    <li class="social">
-                        <a href="{{ site.facebook }}" class="facebook"><i class="fa fa-facebook"></i></a>
-                    </li>
-                {% endif %}
-
-                {% if site.youtube %}
-                    <li class="social">
-                        <a href="{{ site.youtube }}" class="youtube"><i class="fa fa-youtube"></i></a>
-                    </li>
-                {% endif %}
-
-                {% if site.vimeo %}
-                    <li class="social">
-                        <a href="{{ site.vimeo }}" class="vimeo"><i class="fa fa-vimeo-square"></i></a>
-                    </li>
-                {% endif %}
-
-                {% if site.soundcloud %}
-                    <li class="social">
-                        <a href="{{ site.soundcloud }}" class="soundcloud"><i class="fa fa-soundcloud"></i></a>
-                    </li>
+                <li class="social">
+                    <a href="{{ site.tumblr }}" class="tumblr"><i class="fa fa-tumblr"></i></a>
+                </li>
+                {% endif %} {% if site.pinterest %}
+                <li class="social">
+                    <a href="{{ site.pinterest }}" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                </li>
+                {% endif %} {% if site.instagram %}
+                <li class="social">
+                    <a href="{{ site.instagram }}" class="instagram"><i class="fa fa-instagram"></i></a>
+                </li>
+                {% endif %} {% if site.twitter %}
+                <li class="social">
+                    <a href="{{ site.twitter }}" class="twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                {% endif %} {% if site.facebook %}
+                <li class="social">
+                    <a href="{{ site.facebook }}" class="facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                {% endif %} {% if site.youtube %}
+                <li class="social">
+                    <a href="{{ site.youtube }}" class="youtube"><i class="fa fa-youtube"></i></a>
+                </li>
+                {% endif %} {% if site.vimeo %}
+                <li class="social">
+                    <a href="{{ site.vimeo }}" class="vimeo"><i class="fa fa-vimeo-square"></i></a>
+                </li>
+                {% endif %} {% if site.soundcloud %}
+                <li class="social">
+                    <a href="{{ site.soundcloud }}" class="soundcloud"><i class="fa fa-soundcloud"></i></a>
+                </li>
                 {% endif %}
             </ul>
         </nav>
-        <a href='#menu' class="toggle_link noline">
+        <a href='#menu' class="toggle-link noline">
             <i class="fa fa-navicon"></i>
         </a>
     </div>
 </section>
+
+
+
+
+<div id="colorswitch" class="modal color-change">
+    <div class="modal-content">
+      <h4>Change Color Palette</h4>
+      <p>
+      <img id="indigo" src="{{ site.media_folder }}/indigo.jpg">
+      <img id="brown" src="{{ site.media_folder }}/brown.jpg">
+      <img id="green" src="{{ site.media_folder }}/green.jpg">
+      <img id="teal" src="{{ site.media_folder }}/teal.jpg">
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+    </div>
+  </div>

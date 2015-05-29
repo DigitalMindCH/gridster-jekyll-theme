@@ -2,19 +2,19 @@
     {% if post.homedisplay == "iframe" %}
         {% if post.type == "vimeo" %}
             {% if post.vimeo-embed %}
-                <div class="video_container">
+                <div class="video-container">
                     {{ post.vimeo-embed }}
                 </div>
             {% endif %}
         {% elsif post.type == "youtube" %}
             {% if post.yt-video-id %}
-                <div class="video_container">
+                <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
                 </div>
             {% endif %}
         {% elsif post.type == "audio" %}
             {% if post.audio-embed %}
-                <div class="video_container">
+                <div class="video-container">
                     {{ post.audio-embed }}
                 </div>
             {% endif %}
@@ -48,7 +48,7 @@
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
         <h1>{{ post.title }}</h1>
     </a>
-    <p class="post_content">{{ post.content | strip_html | truncatewords: 15 }}</p>
+    <p class="post-content">{{ post.content | strip_html | truncatewords: 15 }}</p>
     <p class="actions">
         <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">Read More</a>
     </p>

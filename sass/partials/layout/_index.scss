@@ -7,17 +7,8 @@
     padding: 10px 0;
     
 
-    @media screen and (max-width: 530px){
+    @media screen and (max-width: $layoutswitch-hiding-point){
         display: none;
-    }
-
-    span{
-        color: $layoutswitch_a_color;
-
-        &:hover{
-            color: $layoutswitch_a_hover_color;
-            cursor: pointer;
-        }
     }
 }
 

@@ -1,7 +1,10 @@
+@import "../toolbox/palettes/base";
+@import "../toolbox/palettes/default";
+
 // Shortcuts
 //-----------
 $noborder: 0 solid transparent;
-$line: 1px solid rgba(160, 160, 160, 0.2);
+$line: 1px solid rgba(160,160,160,.2);
 
 // SETTINGS FOR BASE-STYLE
 //-------------------
@@ -64,7 +67,7 @@ $code-font: 'Source Code Pro', Monaco, "Bitstream Vera Sans Mono", "Lucida Conso
 // size variables (use numbers as values (units as indicated ))
 
 // font-weights, alternatively use: [light, normal, bold]
-$main-font-weight: 400;
+$main-font-weight: 300;
 
 // set $main-font-weight if you don't want your headings to use another font-weight
 $headings-font-weight: 400;
@@ -104,60 +107,49 @@ $definition-list-border: 1px solid rgba(black, 0.1);
 
 // PROJECT SETTINGS
 //------------------
-$h1-fontsize: 4.2rem !default;
-$h2-fontsize: 3.56rem !default;
-$h3-fontsize: 2.92rem !default;
-$h4-fontsize: 2.28rem !default;
-$h5-fontsize: 1.64rem !default;
-$h6-fontsize: 1rem !default;
+
+// new heading font sizes (these come from materializecss.com)
+$h1-fontsize: 4.2rem;
+$h2-fontsize: 3.56rem;
+$h3-fontsize: 2.92rem;
+$h4-fontsize: 2.28rem;
+$h5-fontsize: 1.64rem;
+$h6-fontsize: 1rem;
 
 
-$body_bg-img: url(/img/swirl.jpg); // adjust if you use baseurl, place this before as it will not automatically be added
-
+// collapses
 $sidebarcollapse: 1330px;
 
-$layoutswitch_a_color: $primary-color;
-$layoutswitch_a_hover_color: $accent-color;
-$box_bg: $white;
-$box_line: $line;
+// point at which the layout switch will no longer be visible
+$layoutswitch-hiding-point: 530px;
 
 // Logo Collapses
-$from_full_to_noslogan: 935px;
-$from_noslogan_to_icon: 640px;
+$from-full-to-noslogan: 935px;
+$from-noslogan-to-icon: 640px;
 
 // header
-$head_bg: $box_bg;
+$head-bg: $almost-white;
 
 // search overlay
-$so_bg: rgba(white, .8);
-$so_color: black;
+$so-bg: rgba(white, .8);
+$so-color: black;
 
 // Menu
-$mainnav_collapse: 1068px;
-$mainnav_bg: $white;
-$mainnav_border: $line;
-$mainnav_text-transform: uppercase;
-$mainnav_a_color: $link-color;
-$mainnav_a_hover: $link-hover-color;
-$mainnav_a_hover_bg: $light-primary-color;
-$mainnav_responsive_text_align: center;
-$mainav_parent_plus_display: yes;
+$mainnav-collapse: 1068px;
+$mainnav-responsive-text-align: center;
 
 // Post Pages
-$title_color: $primary-color;
+$title-color: $primary-color;
 
 // author box
-$avatar_width: 150px;
-
-// widgets
-$widget_title_font-weight: light;
+$avatar-width: 150px;
 
 // lightbox
-$lightbox_container_background: $black;
+$lightbox-container-background: $almost-black;
 
 // Tables
-$table-border-color: #d0d0d0 !default;
-$table-striped-color: #f2f2f2 !default;
+$table-border-color: #d0d0d0;
+$table-striped-color: #F2F2F2;
 $table-collapse: 700px;
 
 // shortcuts
@@ -166,4 +158,8 @@ $line: 1px solid rgba(160,160,160,.2);
 // sidebar
 $sidebar-width: 280px;
 $margin-width: 30px;
-$sidebar-stripe-bg: $accent-color;
+$material-sidebar-responsive-border-bg: $accent-color;
+
+
+// modals
+$modal-width-change: 900px;

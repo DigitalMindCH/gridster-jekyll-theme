@@ -11,6 +11,6 @@ The featured image will be added at the beginning of the content, but not above 
 
 ```yml
 ---
-layout: post_full
+layout: post-full
 ---
 ```

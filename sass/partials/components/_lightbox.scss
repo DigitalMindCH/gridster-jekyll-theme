@@ -39,7 +39,7 @@
         &:after {
             border: .2em solid transparent;
             border-radius: 50%;
-            border-top-color: $white;
+            border-top-color: $almost-white;
             margin: auto;
         }
 
@@ -80,7 +80,7 @@
 }
 
 #imagelightbox-close {
-    color: $white;
+    color: $almost-white;
     position: fixed;
     z-index: 10002;
     top: 2em;
@@ -92,7 +92,7 @@
 
     &:hover,
     &:focus{
-        color: darken($white, 20%);
+        color: darken($almost-white, 20%);
         cursor: pointer;
     }
 }
@@ -100,7 +100,7 @@
 #imagelightbox-caption {
     text-align: center;
     color: #fff;
-    background-color: $black;
+    background-color: $almost-black;
     position: fixed;
     z-index: 10001;
     left: 0;
@@ -129,13 +129,13 @@
     left: 2.5em; /* 40 */
 
     &:before{
-        border-left: 2px solid $white;
-        border-bottom: 2px solid $white;
+        border-left: 2px solid $almost-white;
+        border-bottom: 2px solid $almost-white;
     }
 
     &:hover{
         &:before{
-            border-color: darken($white, 30%);
+            border-color: darken($almost-white, 30%);
         }
     }
 }
@@ -144,13 +144,13 @@
     right: 2.5em; /* 40 */
 
     &:before{
-        border-top: 2px solid $white;
-        border-right: 2px solid $white;
+        border-top: 2px solid $almost-white;
+        border-right: 2px solid $almost-white;
     }
 
     &:hover{
         &:before{
-            border-color: darken($white, 30%);
+            border-color: darken($almost-white, 30%);
         }
     }
 }
@@ -222,7 +222,7 @@
     @include flexbox(row, wrap, flex-start, flex-start);
     width: 100%;
     box-sizing: border-box;
-    background: $lightbox_container_background;
+    background: $lightbox-container-background;
 
     a{
         width: calc((100% / 3) - 20px );

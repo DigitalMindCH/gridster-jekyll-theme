@@ -2,88 +2,23 @@
 1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'install',
-1 verbose cli   'grunt-imagemin',
+1 verbose cli   'grunt-contrib-copy',
 1 verbose cli   '--save-dev' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.36
-4 warn package.json twister@0.1.0 No description
-5 warn package.json twister@0.1.0 No repository field.
-6 warn package.json twister@0.1.0 No README data
-7 verbose readDependencies using package.json deps
-8 verbose cache add [ 'grunt-imagemin', null ]
-9 verbose cache add name=undefined spec="grunt-imagemin" args=["grunt-imagemin",null]
-10 verbose parsed url { protocol: null,
-10 verbose parsed url   slashes: null,
-10 verbose parsed url   auth: null,
-10 verbose parsed url   host: null,
-10 verbose parsed url   port: null,
-10 verbose parsed url   hostname: null,
-10 verbose parsed url   hash: null,
-10 verbose parsed url   search: null,
-10 verbose parsed url   query: null,
-10 verbose parsed url   pathname: 'grunt-imagemin',
-10 verbose parsed url   path: 'grunt-imagemin',
-10 verbose parsed url   href: 'grunt-imagemin' }
-11 silly lockFile 01465ab8-grunt-imagemin grunt-imagemin
-12 verbose lock grunt-imagemin C:\Users\Myriam\AppData\Roaming\npm-cache\01465ab8-grunt-imagemin.lock
-13 silly lockFile 01465ab8-grunt-imagemin grunt-imagemin
-14 silly lockFile 01465ab8-grunt-imagemin grunt-imagemin
-15 verbose addNamed [ 'grunt-imagemin', '' ]
-16 verbose addNamed [ null, '*' ]
-17 silly lockFile fb0d7db2-grunt-imagemin grunt-imagemin@
-18 verbose lock grunt-imagemin@ C:\Users\Myriam\AppData\Roaming\npm-cache\fb0d7db2-grunt-imagemin.lock
-19 silly addNameRange { name: 'grunt-imagemin', range: '*', hasData: false }
-20 verbose request where is /grunt-imagemin
-21 verbose request registry https://registry.npmjs.org/
-22 verbose request id f75262dd9d7a7657
-23 verbose url raw /grunt-imagemin
-24 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-imagemin' ]
-25 verbose url resolved https://registry.npmjs.org/grunt-imagemin
-26 verbose request where is https://registry.npmjs.org/grunt-imagemin
-27 info trying registry request attempt 1 at 14:00:14
-28 http GET https://registry.npmjs.org/grunt-imagemin
-29 http 404 https://registry.npmjs.org/grunt-imagemin
-30 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-30 verbose headers   'content-type': 'application/json',
-30 verbose headers   'cache-control': 'max-age=0',
-30 verbose headers   'content-length': '51',
-30 verbose headers   'accept-ranges': 'bytes',
-30 verbose headers   date: 'Wed, 20 May 2015 12:00:12 GMT',
-30 verbose headers   via: '1.1 varnish',
-30 verbose headers   age: '0',
-30 verbose headers   connection: 'keep-alive',
-30 verbose headers   'x-served-by': 'cache-fra1221-FRA',
-30 verbose headers   'x-cache': 'MISS',
-30 verbose headers   'x-cache-hits': '0',
-30 verbose headers   'x-timer': 'S1432123212.210804,VS0,VE431' }
-31 silly registry.get cb [ 404,
-31 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-31 silly registry.get     'content-type': 'application/json',
-31 silly registry.get     'cache-control': 'max-age=0',
-31 silly registry.get     'content-length': '51',
-31 silly registry.get     'accept-ranges': 'bytes',
-31 silly registry.get     date: 'Wed, 20 May 2015 12:00:12 GMT',
-31 silly registry.get     via: '1.1 varnish',
-31 silly registry.get     age: '0',
-31 silly registry.get     connection: 'keep-alive',
-31 silly registry.get     'x-served-by': 'cache-fra1221-FRA',
-31 silly registry.get     'x-cache': 'MISS',
-31 silly registry.get     'x-cache-hits': '0',
-31 silly registry.get     'x-timer': 'S1432123212.210804,VS0,VE431' } ]
-32 silly lockFile fb0d7db2-grunt-imagemin grunt-imagemin@
-33 silly lockFile fb0d7db2-grunt-imagemin grunt-imagemin@
-34 error 404 404 Not Found: grunt-imagemin
-34 error 404
-34 error 404 'grunt-imagemin' is not in the npm registry.
-34 error 404 You should bug the author to publish it
-34 error 404 It was specified as a dependency of 'twister'
-34 error 404
-34 error 404 Note that you can also install from a
-34 error 404 tarball, folder, or http url, or git url.
-35 error System Windows_NT 6.2.9200
-36 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "grunt-imagemin" "--save-dev"
-37 error cwd C:\Users\Myriam\Documents\GitLab\twister_material
-38 error node -v v0.10.36
-39 error npm -v 1.4.28
-40 error code E404
-41 verbose exit [ 1, true ]
+4 error Failed to parse json
+4 error Unexpected token }
+5 error File: C:\Users\Myriam\Documents\GitLab\gridster\package.json
+6 error Failed to parse package.json data.
+6 error package.json must be actual JSON, not just JavaScript.
+6 error
+6 error This is not a bug in npm.
+6 error Tell the package author to fix their package.json file. JSON.parse
+7 error System Windows_NT 6.2.9200
+8 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "grunt-contrib-copy" "--save-dev"
+9 error cwd C:\Users\Myriam\Documents\GitLab\gridster
+10 error node -v v0.10.36
+11 error npm -v 1.4.28
+12 error file C:\Users\Myriam\Documents\GitLab\gridster\package.json
+13 error code EJSONPARSE
+14 verbose exit [ 1, true ]

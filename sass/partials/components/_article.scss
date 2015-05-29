@@ -2,11 +2,11 @@ article{
     @include shadow(1);
     border-radius: 2px;
     box-sizing: border-box;
-    background: $white;
+    background: $almost-white;
     margin-bottom: 20px;
     position: relative;
 
-    .content_container &{
+    .content-container &{
         padding: 20px;
 
         p{
@@ -62,10 +62,8 @@ article{
 
 .wrapper{
     width: 100%;
-    border: $box_line;
     height: auto;
     box-sizing: border-box;
-    background: $box_bg;
 }
 
 .short{

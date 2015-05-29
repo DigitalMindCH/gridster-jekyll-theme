@@ -1,29 +1,42 @@
 // TOOLBOX COLORS
 //---------------------------------------------------------------------
-$white: #FDFDFD;
-$black: #202020;
+$almost-white: #FDFDFD;
+$almost-black: #202020;
 $darkgray: #333;
 
 // PROJECT COLORS
 //---------------------------------------------------------------------
+$white: #FFF;
+$black: #212121;
+$gray: #727272;
 
-// material palettes
+// material colors, to create new palette check out: http://www.materialpalette.com/
 
-$primary-text-icon-color: #FFF;
-$primary-text: #212121;
-$secondary-text: #727272;
-$divider-color: rgba(0, 0, 0, 0.87);
+$green: #4CAF50;
+$lightgreen: #C8E6C9;
+$darkgreen: #388E3C;
 
-// green & red
-/*
-$dark-primary-color: #388E3C;
-$primary-color: #4CAF50;
-$light-primary-color: #C8E6C9;
-$accent-color: #FF5252;
-*/
+$red: #FF5252;
 
-// indigo & pink
-$dark-primary-color: #303F9F;
-$primary-color: #3F51B5;
-$light-primary-color: #C5CAE9;
-$accent-color: #FF4081;
+//----------------------------
+
+$indigo: #3F51B5;
+$darkindigo: #303F9F;
+$lightindigo: #C5CAE9;
+
+$pink: #FF4081;
+
+//----------------------------
+
+$teal: #009688;
+$darkteal: #00796B;
+$lightteal: #B2DFDB;
+
+$amber: #FFC107;
+
+//----------------------------
+
+$brown: #795548;
+$darkbrown: #5D4037;
+$lightbrown: #D7CCC8;
+$purple: #E040FB;

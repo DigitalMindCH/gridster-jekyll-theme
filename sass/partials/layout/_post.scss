@@ -1,15 +1,15 @@
-.content_container{
+.content-container{
     width: 100%;
 
-    .post_title{
-        color: $title_color;
+    .post-title{
+        color: $title-color;
         padding: 10px 0;
     }
 
     .meta{
         padding: 5px 0;
         margin-bottom: 5px;
-        border-bottom: $box_line;
+        border-bottom: $line;
         color: $secondary-text;
     }
 
@@ -30,7 +30,7 @@
         }
     }
 
-    .post_nav{
+    .post-nav{
         @include clearfix();
         margin: 20px 0;
 

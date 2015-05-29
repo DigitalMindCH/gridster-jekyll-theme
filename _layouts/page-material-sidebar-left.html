@@ -12,16 +12,16 @@
         {% include search.html %}
         <section class="margin">
             <div class="content">
-                <div class="content_container">
+                <div class="content-container">
                     <article>
                         {% if page.featimg %}
                             <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ page.featimg }}" alt="{{ page.featimg }}">
                         {% endif %}
 
-                        <h1 class="page_title">
+                        <h1 class="page-title">
                             {{ page.title }}
                         </h1>
-                        <div class="post_content">
+                        <div class="post-content">
                             {{ content }}
                         </div>
                     </article>

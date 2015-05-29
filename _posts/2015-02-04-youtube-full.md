@@ -14,7 +14,7 @@ For a YouTube video, no embedding code is required, it all works through the vid
 
 ```yml
 ---
-layout: post_full
+layout: post-full
 type: youtube
 yt-video-id: hPX9h5OrlhU
 homedisplay: iframe

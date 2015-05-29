@@ -4,8 +4,9 @@ destination: jekyllbuild
 url: #place url
 baseurl: #place folder name if site is served in subfolder
 permalink: /:title/
-paginate: 3
+paginate: 8
 paginate_path: /page/:num/
+gems: [jekyll-paginate]
 tag_dir: /tag
 category_dir: /category
 author_dir: /author
@@ -56,7 +57,7 @@ prose:
             - name: "with sidebar"
               value: "post"
             - name: "full width"
-              value: "post_full"
+              value: "post-full"
       - name: "author"
         field:
           element: "text"

@@ -9,43 +9,47 @@
     }
 }
 
-.has-classic-sidebar-left{    
-    .content{
-        @include flexbox(row-reverse, wrap, space-between, flex-start);
-        .content_container,
-        .articles{
-            $subs: $margin-width + $sidebar-width;
-            width: calc(100% - #{$subs});
-        }
-
-        @media screen and (max-width: $sidebarcollapse){
-            @include flexbox(column, wrap, flex-start, center);
-            .content_container,
+.has-classic-sidebar-left{   
+    .margin{
+        .content{
+            @include flexbox(row-reverse, wrap, space-between, flex-start);
+            .content-container,
             .articles{
-                width: 100%;
-                margin-bottom: $margin-width;
+                $subs: $margin-width + $sidebar-width;
+                width: calc(100% - #{$subs});
+            }
+
+            @media screen and (max-width: $sidebarcollapse){
+                @include flexbox(column, wrap, flex-start, center);
+                .content-container,
+                .articles{
+                    width: 100%;
+                    margin-bottom: $margin-width;
+                }
             }
         }
     }
 }
 .has-classic-sidebar-right{
-    .content{
-        @include flexbox(row, wrap, space-between, flex-start);
-        .content_container,
-        .articles{
-            $subs: $margin-width + $sidebar-width;
-            width: calc(100% - #{$subs});
-        }
-
-        @media screen and (max-width: $sidebarcollapse){
-            @include flexbox(column, wrap, flex-start, center);
-            .content_container,
+    .margin{
+        .content{
+            @include flexbox(row, wrap, space-between, flex-start);
+            .content-container,
             .articles{
-                width: 100%;
-                margin-bottom: $margin-width;
+                $subs: $margin-width + $sidebar-width;
+                width: calc(100% - #{$subs});
             }
-        }
-    }    
+
+            @media screen and (max-width: $sidebarcollapse){
+                @include flexbox(column, wrap, flex-start, center);
+                .content-container,
+                .articles{
+                    width: 100%;
+                    margin-bottom: $margin-width;
+                }
+            }
+        }    
+    }
 }
 
 .material-sidebar {
@@ -63,8 +67,8 @@
         padding: 20px;
         border-bottom: $line;
         
-        .ts_no_slogan,
-        .ts_icon{
+        .ts-no-slogan,
+        .ts-icon{
             display: none;
         }
     }
@@ -80,7 +84,7 @@
             .sidebar-toggle {
                 transition-delay: .3s;
                 height: $margin-width;
-                background: rgba($sidebar-stripe-bg, 0);
+                background: rgba($material-sidebar-responsive-border-bg, 0);
                 i {
                     transform: translate(50%, -50%) rotate(45deg);
                 }
@@ -93,10 +97,10 @@
             left: $sidebar-width - $margin-width;
             width: $margin-width;
             height: 100%;
-            background: $sidebar-stripe-bg;
+            background: $material-sidebar-responsive-border-bg;
             &:hover {
                 cursor: pointer;
-                background: darken($sidebar-stripe-bg, 7%);
+                background: darken($material-sidebar-responsive-border-bg, 7%);
             }
             i {
                 transition: 1s all ease;
@@ -112,7 +116,7 @@
 .has-material-sidebar-left,
 .has-material-sidebar-right{
     &,
-    .main_menu {
+    .main-menu {
         width: calc(100% - #{$sidebar-width});
         @media screen and (max-width: $sidebarcollapse) {
             width: calc(100% - #{$margin-width});
@@ -122,7 +126,7 @@
 
 .has-material-sidebar-left {
     margin-left: $sidebar-width;
-    .main_menu {
+    .main-menu {
         margin-left: $sidebar-width;
     }
     .material-sidebar {
@@ -130,7 +134,7 @@
     }
     @media screen and (max-width: $sidebarcollapse) {
         margin-left: $margin-width;
-        .main_menu {
+        .main-menu {
             margin-left: $margin-width;
         }
     }
@@ -138,7 +142,7 @@
 
 .has-material-sidebar-right {
     margin-right: $sidebar-width;
-    .main_menu {
+    .main-menu {
         margin-right: $sidebar-width;
     }
     .material-sidebar {
@@ -146,7 +150,7 @@
     }
     @media screen and (max-width: $sidebarcollapse) {
         margin-right: $margin-width;
-        .main_menu {
+        .main-menu {
             margin-right: $margin-width;
         }
     }

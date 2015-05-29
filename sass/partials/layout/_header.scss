@@ -8,26 +8,26 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    background: $head_bg;
+    background: $head-bg;
     z-index: 20;
 
-    @media screen and (min-width: $from_full_to_noslogan){
-        .ts_no_slogan,
-        .ts_icon{
+    @media screen and (min-width: $from-full-to-noslogan){
+        .ts-no-slogan,
+        .ts-icon{
             display: none;
         }
     }
 
-    @media screen and (max-width: $from_full_to_noslogan - 1) and (min-width: $from_noslogan_to_icon + 1){
-        .ts_full,
-        .ts_icon{
+    @media screen and (max-width: $from-full-to-noslogan - 1) and (min-width: $from-noslogan-to-icon + 1){
+        .ts-full,
+        .ts-icon{
             display: none;
         }
     }
 
-    @media screen and (max-width: $from_noslogan_to_icon){
-        .ts_full,
-        .ts_no_slogan{
+    @media screen and (max-width: $from-noslogan-to-icon){
+        .ts-full,
+        .ts-no-slogan{
             display: none;
         }
     }
@@ -42,7 +42,7 @@
         box-sizing: border-box;
         overflow: hidden;
 
-        @media screen and (max-width: $from_noslogan_to_icon){
+        @media screen and (max-width: $from-noslogan-to-icon){
             padding: 120px 10px;
         }
 

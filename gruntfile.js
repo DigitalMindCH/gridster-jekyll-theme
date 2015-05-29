@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         },
 
         responsive_images: {
-            square:{
+            square: {
                 options: {
                     sizes: [{
                         width: 450,
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                     dest: 'media/compressed/crops/450x450/'
                 }]
             },
-            thumbs:{
+            thumbs: {
                 options: {
                     sizes: [{
                         width: 450,
@@ -99,7 +99,11 @@ module.exports = function(grunt) {
                 files: {
                     'css/main.css': 'sass/main.scss',
                     'css/grid.css': 'sass/grid.scss',
-                    'css/classic.css': 'sass/classic.scss'
+                    'css/classic.css': 'sass/classic.scss',
+                    // you may remove these for your site
+                    'css/main_brown.css': 'sass/main_brown.scss',
+                    'css/main_green.css': 'sass/main_green.scss',
+                    'css/main_teal.css': 'sass/main_teal.scss'
                 }
             }
         },
@@ -113,6 +117,27 @@ module.exports = function(grunt) {
             },
         },
 
+        copy: {
+            css: {
+                files: [
+                    {
+                        expand: true,
+                        src: ['css/**'],
+                        dest: 'jekyllbuild/'
+                    },
+                ]
+            },
+            js: {
+                files: [
+                    {
+                        expand: true,
+                        src: ['js/build/**'],
+                        dest: 'jekyllbuild/'
+                    },
+                ]
+            }
+        },
+
         open: {
             build: {
                 path: 'http://localhost:4000',
@@ -124,22 +149,21 @@ module.exports = function(grunt) {
                 livereload: true
             },
             site: {
-                files: ["*.html", "**/*.html", "*.md", "**/*.md", "**/*.yml", "*.yml", "!jekyllbuild/*.*", "!jekyllbuild/**/*.*", "!node_modules/{,*/}*.*"],
-                tasks: ["shell:jekyllBuild"]
+                files: ["{,*/}{,*/}{,*/}*.html", "{,*/}{,*/}{,*/}*.md", "{,*/}*.yml", "!jekyllbuild/{,*/}{,*/}*.*", "!node_modules/{,*/}*.*"],
+                tasks: ["shell:jekyllBuild", "copy"]
             },
             js: {
-                files: ["js/*.js"],
-                tasks: ["uglify", "shell:jekyllBuild"]
+                files: ['js/{,*/}*.js'],
+                tasks: ["uglify", "copy:js"]
             },
             css: {
-                files: ["sass/*.scss", "sass/partials/*.scss", "sass/partials/components/*.scss", "sass/partials/layout/*.scss", "sass/modules/*.scss"],
-                tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
+                files: ["sass/{,*/}{,*/}{,*/}*.scss"],
+                tasks: ["sass", "autoprefixer", "copy:css"]
             },
             images: {
                 files: ["img/{,*/}{,*/}*.{png,jpg}"],
-                tasks: ["newer:imagemin", "responsive_images", "shell:jekyllBuild"]
+                tasks: ["newer:imagemin", "responsive_images", "shell:jekyllBuild", "copy"]
             }
-
         },
 
         buildcontrol: {
@@ -171,6 +195,6 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.registerTask("serve", ["shell:jekyllServe"]);
-    grunt.registerTask("default", ["newer:imagemin", "responsive_images", "sass", "autoprefixer", "shell:jekyllBuild", "open", "watch"]);
+    grunt.registerTask("default", ["newer:imagemin", "responsive_images", "uglify", "sass", "autoprefixer", "shell:jekyllBuild", "copy", "open", "watch"]);
     grunt.registerTask("deploy", ["buildcontrol:pages"]);
 };
