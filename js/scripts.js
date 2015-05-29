@@ -1,8 +1,10 @@
 $(document).ready(function () {
 
+    // trigger modal for switching the stylesheet
     $('.modal-trigger').leanModal();
 
 
+    // sidebar toggling responsive
     $('.sidebar-toggle').click(function () {
         $('.sidebar').toggleClass('open');
     });
@@ -34,7 +36,7 @@ $(document).ready(function () {
         }
     });
 
-    // Style Switch
+    // Style Switch index layout
     $(".switch div").click(function () {
         var id = $(this).attr("id");
 
@@ -42,7 +44,7 @@ $(document).ready(function () {
         $("#switch-style").attr("href", "/css/" + id + ".css");
     });
 
-    // Style Switch
+    // Style Switch color scheme
     $(".color-change img").click(function () {
         var id = $(this).attr("id");
 
