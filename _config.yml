@@ -1,5 +1,5 @@
-name: Twister
-description: a powerful jekyll theme
+name: Gridster
+description: the material experience for jekyll
 destination: jekyllbuild
 url: #place url
 baseurl: #place folder name if site is served in subfolder
