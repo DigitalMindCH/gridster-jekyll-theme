@@ -175,8 +175,8 @@ module.exports = function (grunt) {
             },
             pages: {
                 options: {
-                    remote: 'https://github.com/user/reponame.git', // change that
-                    branch: 'gh-pages' // adjust here
+                    remote: 'git@knowtology.com:miri/twister_material.git', // change that
+                    branch: 'site' // adjust here
                 }
             }
         },
