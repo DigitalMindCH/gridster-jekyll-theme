@@ -1,3 +1,4 @@
+full_rebuild: true
 name: Gridster
 description: the material experience for jekyll
 destination: jekyllbuild
