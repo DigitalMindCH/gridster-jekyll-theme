@@ -14,6 +14,12 @@
         @include flexbox(row, wrap, space-between, center);
         height: inherit;
         line-height: inherit;
+        
+        @media screen and (min-width: $mainnav-collapse + 1) {
+            .homelink{
+                display: none;
+            }
+        }
     }
     a {
         font-size: 1rem;
@@ -89,6 +95,10 @@
         background: white;
         color: $primary-text;
         line-height: 44px;
+        
+        .homelink{
+            display: none;
+        }
         
         a{
             color: $accent-color;
