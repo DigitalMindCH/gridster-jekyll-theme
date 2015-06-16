@@ -32,6 +32,8 @@ description: the good site of life
         {% for i in (1..paginator.total_pages) limit: 5 offset: start %}
             {% if i == paginator.page %}
                 <span class="btn disabled">{{ i }}</span>
+            {% elsif i == 1 %}
+                <a class="btn" href="{{ site.baseurl }}/">{{ i }}</a>
             {% else %}
                 <a class="btn" href="/page/{{ i }}">{{ i }}</a>
             {% endif %}

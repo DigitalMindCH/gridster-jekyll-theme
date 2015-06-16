@@ -20,7 +20,7 @@
 // regular
 @font-face {
     font-family: 'Roboto';
-    $path-part: 'Regular';
+    $path-part: 'Medium';
     src: url('../fonts/Roboto-#{$path-part}-webfont.eot');
     src: url('../fonts/Roboto-#{$path-part}-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Roboto-#{$path-part}-webfont.woff') format('woff'),
@@ -33,13 +33,13 @@
 // bold
 @font-face {
     font-family: 'Roboto';
-    $path-part: 'Bold';
+    $path-part: 'Black';
     src: url('../fonts/Roboto-#{$path-part}-webfont.eot');
     src: url('../fonts/Roboto-#{$path-part}-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Roboto-#{$path-part}-webfont.woff') format('woff'),
          url('../fonts/Roboto-#{$path-part}-webfont.ttf') format('truetype'),
          url('../fonts/Roboto-#{$path-part}-webfont.svg#RobotoBold') format('svg');
-    font-weight: 700;
+    font-weight: 900;
     font-style: normal;
 }
 
@@ -59,7 +59,7 @@
 // regular italic
 @font-face {
     font-family: 'Roboto';
-    $path-part: 'Italic';
+    $path-part: 'MediumItalic';
     src: url('../fonts/Roboto-#{$path-part}-webfont.eot');
     src: url('../fonts/Roboto-#{$path-part}-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Roboto-#{$path-part}-webfont.woff') format('woff'),
@@ -72,13 +72,13 @@
 // bold italic
 @font-face {
     font-family: 'Roboto';
-    $path-part: 'BoldItalic';
+    $path-part: 'BlackItalic';
     src: url('../fonts/Roboto-#{$path-part}-webfont.eot');
     src: url('../fonts/Roboto-#{$path-part}-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Roboto-#{$path-part}-webfont.woff') format('woff'),
          url('../fonts/Roboto-#{$path-part}-webfont.ttf') format('truetype'),
          url('../fonts/Roboto-#{$path-part}-webfont.svg#RobotoBoldItalic') format('svg');
-    font-weight: 700;
+    font-weight: 900;
     font-style: italic;
 }
 

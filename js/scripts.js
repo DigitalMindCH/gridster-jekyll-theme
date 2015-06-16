@@ -35,6 +35,11 @@ $(document).ready(function () {
             $('body').removeClass('overflow');
         }
     });
+    
+    var cookie = getCookie("switch-style");
+    if (cookie != "") {
+        $("#switch-style").attr("href", "/css/" + cookie + ".css");
+    }
 
     // Style Switch index layout
     $(".switch div").click(function () {
@@ -42,8 +47,9 @@ $(document).ready(function () {
 
         // adjust link here
         $("#switch-style").attr("href", "/css/" + id + ".css");
+        setCookie("switch-style", id, 365);
     });
-
+        
     // Style Switch color scheme
     $(".color-change img").click(function () {
         var id = $(this).attr("id");
@@ -62,6 +68,33 @@ $(document).ready(function () {
 $(window).scroll(function () {
     // scroll stuff
 });
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+function checkCookie(cname) {
+    var cookie = getCookie(cname);
+    if (cookie != "") {
+        alert("cookie is" + cookie);
+    } else {
+        alert("cookie unset");
+    }
+}
 
 // lightbox stuff
 $(function () {
