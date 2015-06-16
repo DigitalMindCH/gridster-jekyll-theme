@@ -23,6 +23,8 @@
             </div>
         </section>
         {% include footer.html %}
-        <script src="{{ site.baseurl | replace: '//', '/' }}/js/build/global.min.js"></script>
+        {% if site.infinite_scroll == true %}
+            <script src="{{ site.baseurl | replace: '//', '/' }}/js/build/infinite.min.js"></script>
+        {% endif %}
     </body>
 </html>

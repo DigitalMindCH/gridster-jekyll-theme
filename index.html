@@ -19,7 +19,7 @@ description: the good site of life
 
         <!-- previous link -->
         {% if paginator.previous_page %}
-            <a class="btn" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i></a>
+            <a class="btn prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i></a>
         {% else %}
             <span class="btn disabled"><i class="fa fa-angle-left"></i></span>
         {% endif %}
@@ -41,7 +41,7 @@ description: the good site of life
 
         <!-- next link -->
         {% if paginator.next_page %}
-            <a class="btn" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-right"></i></a>
+            <a class="btn next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-right"></i></a>
         {% else %}
             <span class="btn disabled"><i class="fa fa-angle-right"></i></span>
         {% endif %}

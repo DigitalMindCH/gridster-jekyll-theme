@@ -85,9 +85,13 @@ module.exports = function (grunt) {
         },
 
         uglify: {
-            build: {
-                src: 'js/*.js',
-                dest: 'js/build/global.min.js'
+            global: {
+                src: ['js/*.js', '!js/infinite/*.js'],
+                dest: 'js/build/global.min.js',
+            },
+            infinite: {
+                src: 'js/infinite/*.js',
+                dest: 'js/build/infinite.min.js'
             }
         },
 
@@ -100,7 +104,7 @@ module.exports = function (grunt) {
                     'css/main.css': 'sass/main.scss',
                     'css/grid.css': 'sass/grid.scss',
                     'css/classic.css': 'sass/classic.scss',
-                    // you may remove these for your site
+                    // you may want to remove these for your site
                     'css/main_brown.css': 'sass/main_brown.scss',
                     'css/main_green.css': 'sass/main_green.scss',
                     'css/main_teal.css': 'sass/main_teal.scss'
@@ -153,7 +157,7 @@ module.exports = function (grunt) {
                 tasks: ["shell:jekyllBuild", "copy"]
             },
             js: {
-                files: ['js/{,*/}*.js'],
+                files: ['js/{,*/}{,*/}*.js'],
                 tasks: ["uglify", "copy:js"]
             },
             css: {

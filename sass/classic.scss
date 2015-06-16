@@ -1,7 +1,8 @@
 @import "toolbox/all";
 @import "base/settings";
 @import "base/typography";
-.articles {
+.articles,
+.jscroll-inner {
     width: 100%;
     max-width: 750px;
     @include center();

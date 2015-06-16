@@ -6,7 +6,8 @@ $fourtothree: 1460px;
 $threetotwo: 775px;
 $twotoone: 530px;
 
-.articles{
+.articles,
+.jscroll-inner {
     @include flexbox(row, wrap, flex-start, flex-start);
     width: 100%;
 
