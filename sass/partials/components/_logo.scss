@@ -1,6 +1,7 @@
 // Logo SVG styling you most probably will replace all of the below.
 
 .icon{
+    transition: .3s all ease; 
     fill:$dark-primary-color;    
     .lines{
         stroke: white;
