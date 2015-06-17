@@ -1,61 +1,4 @@
 // Main Nav
-.main-menu {
-    background: $primary-color;
-    color: $primary-text-icon-color;
-    height: 64px;
-    line-height: 64px;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    left: 0px;
-    font-weight: 400;
-    @include shadow(1);
-    z-index: 2;
-    .content {
-        @include flexbox(row, wrap, space-between, center);
-        height: inherit;
-        line-height: inherit;
-        
-        @media screen and (min-width: $mainnav-collapse + 1) {
-            .homelink{
-                display: none;
-            }
-        }
-    }
-    a {
-        font-size: 1rem;
-        padding: 0 15px;
-        color: $primary-text-icon-color;
-        &:hover {
-            color: $primary-text-icon-color;
-        }
-    }
-    
-    .head & .ts-icon{
-        display: block;
-        width: 10px;
-        transform: scale(4);
-        
-        &:hover{
-            background-color: rgba(0, 0, 0, .1);
-        }
-        .icon{
-            transition: .3s all ease;
-            fill: white;
-            .lines{
-                stroke: $primary-color;
-            }
-            
-            &:hover{
-                fill: white;
-                .lines{
-                    stroke: $primary-color;
-                }
-            }
-        }
-    }
-}
-
 #menu {
     z-index: 105;
     background: $primary-color;
@@ -98,10 +41,6 @@
         color: $primary-text;
         line-height: 44px;
         
-        .homelink{
-            display: none;
-        }
-        
         a{
             color: $accent-color;
             
@@ -137,6 +76,36 @@
                 background-color: rgba(0, 0, 0, .1);    
             }
         }
+    }
+}
+
+.main-menu {
+    background: $primary-color;
+    color: $primary-text-icon-color;
+    height: 64px;
+    line-height: 64px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    font-weight: 400;
+    @include shadow(1);
+    z-index: 2;
+    
+    a {
+        font-size: 1rem;
+        padding: 0 15px;
+        color: $primary-text-icon-color;
+        &:hover {
+            color: $primary-text-icon-color;
+        }
+    }
+    
+    .content {
+        @include flexbox(row, wrap, space-between, center);
+        height: inherit;
+        line-height: inherit;            
+        
     }
 }
 
