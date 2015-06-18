@@ -9,7 +9,7 @@
            {% include nav.html %}
         </header>
         {% include search.html %}
-        <section class="margin">
+        <div class="margin">
             <div class="content">
                 <div class="switch">
                     <div id="grid"><span></span></div>
@@ -21,7 +21,7 @@
                 </div>
                 {% include material-sidebar.html %}
             </div>
-        </section>
+        </div>
         {% include footer.html %}
         {% if site.infinite_scroll == true %}
             <script src="{{ site.baseurl | replace: '//', '/' }}/js/build/infinite.min.js"></script>
