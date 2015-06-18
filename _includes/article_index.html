@@ -13,7 +13,7 @@
         {% elsif post.type == "youtube" %}
             {% if post.yt-video-id %}
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" allowfullscreen></iframe>
                 </div>
             {% endif %}
         {% elsif post.type == "audio" %}

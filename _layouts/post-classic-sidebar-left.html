@@ -23,7 +23,7 @@
                         {% elsif page.type == "youtube" %}
                             {% if page.yt-video-id %}
                                 <div class="video-container">
-                                    <iframe src="https://www.youtube.com/embed/{{page.yt-video-id}}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube.com/embed/{{page.yt-video-id}}?feature=player_detailpage" allowfullscreen></iframe>
                                 </div>
                             {% endif %}
                         {% elsif page.type == "image" or page.type == "gallery" %}
