@@ -179,8 +179,8 @@ module.exports = function (grunt) {
             },
             pages: {
                 options: {
-                    remote: 'git@knowtology.com:miri/twister_material.git', // change that
-                    branch: 'site' // adjust here
+                    remote: 'git@github.com:DigitalMindCH/gridster-jekyll-theme.git', // change that
+                    branch: 'gh-pages' // adjust here
                 }
             }
         },
