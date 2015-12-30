@@ -1,0 +1,12 @@
+---
+layout: index-classic-sidebar-right
+title: Tags
+---
+
+{% for sitetag in site.tags %}
+  {% assign tagname = sitetag[0] %}
+  <h2> {{ tagname }} </h2>
+  {% for post in site.tags[tagname] %}
+    {% include article_index_short.html %}
+  {% endfor %}
+{% endfor %}

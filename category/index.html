@@ -1,0 +1,12 @@
+---
+layout: index-classic-sidebar-right
+title: Categories
+---
+
+{% for sitecategory in site.categories %}
+  {% assign categoryname = sitecategory[0] %}
+  <h2> {{ categoryname }} </h2>
+  {% for post in site.categories[categoryname] %}
+    {% include article_index_short.html %}
+  {% endfor %}
+{% endfor %}
