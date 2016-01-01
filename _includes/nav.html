@@ -46,6 +46,14 @@
                 <li class="social">
                     <a href="{{ site.tumblr }}" class="tumblr"><i class="fa fa-tumblr"></i></a>
                 </li>
+                {% endif %} {% if site.email %}
+                <li class="social">
+                    <a href="mailto:{{ site.email }}" class="noline"><i class="fa fa-envelope"></i></a>
+                </li>
+                {% endif %} {% if site.rss %}
+                <li class="social">
+                    <a href="{{ site.rss }}" class="rss"><i class="fa fa-rss"></i></a>
+                </li>
                 {% endif %} {% if site.pinterest %}
                 <li class="social">
                     <a href="{{ site.pinterest }}" class="pinterest"><i class="fa fa-pinterest"></i></a>
