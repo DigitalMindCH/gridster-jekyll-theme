@@ -23,6 +23,8 @@ facebook: "#"
 youtube: "#"
 vimeo: "#"
 soundcloud: "#"
+email: "#"
+rss: feed.xml
 
 encoding: utf-8
 defaults:
