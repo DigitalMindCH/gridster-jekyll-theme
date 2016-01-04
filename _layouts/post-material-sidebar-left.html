@@ -74,6 +74,9 @@
                         </div>
                         {% endif %}
                     </article>
+                    {% if page.comments %}
+                      {% include comment.html %}
+                    {% endif %}
                     <div class="post-nav">
                         {% if page.previous.url %}
                         <a class="btn prev" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i><span class="short"> prev</span><span class="long">ious post</span></a>

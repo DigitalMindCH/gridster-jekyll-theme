@@ -36,6 +36,7 @@ defaults:
       layout: "post-material-sidebar-left"
       type: "standard"
       homedisplay: "featimg"
+      comments: true
 markdown: kramdown
 kramdown:
   input: GFM
