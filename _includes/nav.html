@@ -8,6 +8,19 @@
                     <a class="homelink" href="{{ site.baseurl | replace: '//', '/' }}/">Home</a>
                 </li>
                 <li>
+                    <a class="dropdown-button" href="#" data-activates='drop-author'>About&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                </li>
+                <div id="drop-author" class="dropdown-content">
+                  <li>
+                      <a href="{{ site.author_dir | replace: '//', '/' }}">About</a>
+                  </li>
+                  {% for siteauthor in site.data.authors %}
+                    <li>
+                        <a href="{{ site.author_dir }}/{{ siteauthor.id }}">{{ siteauthor.name }}</a>
+                    </li>
+                  {% endfor %}
+                </div>
+                <li>
                     <a class="dropdown-button" href="#" data-activates='drop-category'>Categories&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
                 </li>
                 <div id="drop-category" class="dropdown-content">
