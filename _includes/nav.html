@@ -8,11 +8,33 @@
                     <a class="homelink" href="{{ site.baseurl | replace: '//', '/' }}/">Home</a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl | replace: '//', '/' }}/category">Categories</a>
+                    <a class="dropdown-button" href="#" data-activates='drop-category'>Categories&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
                 </li>
+                <div id="drop-category" class="dropdown-content">
+                  <li>
+                      <a href="{{ site.category_dir | replace: '//', '/' }}">All Categories</a>
+                  </li>
+                  {% for sitecategory in site.categories %}
+                    {% assign categoryname = sitecategory[0] %}
+                    <li>
+                        <a href="{{ site.category_dir }}/{{ categoryname }}">{{ categoryname }}</a>
+                    </li>
+                  {% endfor %}
+                </div>
                 <li>
-                    <a href="{{ site.baseurl | replace: '//', '/' }}/tag">Tags</a>
+                    <a class="dropdown-button" href="#" data-activates='drop-tag'>Tags&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
                 </li>
+                <div id="drop-tag" class="dropdown-content">
+                  <li>
+                      <a href="{{ site.tag_dir | replace: '//', '/' }}">All Tags</a>
+                  </li>
+                  {% for sitetag in site.tags %}
+                    {% assign tagname = sitetag[0] %}
+                    <li>
+                        <a href="{{ site.tag_dir }}/{{ tagname }}">{{ tagname }}</a>
+                    </li>
+                  {% endfor %}
+                </div>
                 <li>
                     <a href="{{ site.baseurl | replace: '//', '/' }}/archive">Archive</a>
                 </li>
