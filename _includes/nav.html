@@ -12,11 +12,11 @@
                 </li>
                 <div id="drop-author" class="dropdown-content">
                   <li>
-                      <a href="{{ site.author_dir | replace: '//', '/' }}">About</a>
+                      <a href="{{ site.author_dir | prepend: site.baseurl | replace: '//', '/' }}">About</a>
                   </li>
                   {% for siteauthor in site.data.authors %}
                     <li>
-                        <a href="{{ site.author_dir }}/{{ siteauthor.id }}">{{ siteauthor.name }}</a>
+                        <a href="{{ site.baseurl }}{{ site.author_dir }}/{{ siteauthor.id }}">{{ siteauthor.name }}</a>
                     </li>
                   {% endfor %}
                 </div>
@@ -25,12 +25,12 @@
                 </li>
                 <div id="drop-category" class="dropdown-content">
                   <li>
-                      <a href="{{ site.category_dir | replace: '//', '/' }}">All Categories</a>
+                      <a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}">All Categories</a>
                   </li>
                   {% for sitecategory in site.categories %}
                     {% assign categoryname = sitecategory[0] %}
                     <li>
-                        <a href="{{ site.category_dir }}/{{ categoryname }}">{{ categoryname }}</a>
+                        <a href="{{ site.baseurl }}{{ site.category_dir }}/{{ categoryname }}">{{ categoryname }}</a>
                     </li>
                   {% endfor %}
                 </div>
@@ -39,12 +39,12 @@
                 </li>
                 <div id="drop-tag" class="dropdown-content">
                   <li>
-                      <a href="{{ site.tag_dir | replace: '//', '/' }}">All Tags</a>
+                      <a href="{{ site.tag_dir | prepend: site.baseurl | replace: '//', '/' }}">All Tags</a>
                   </li>
                   {% for sitetag in site.tags %}
                     {% assign tagname = sitetag[0] %}
                     <li>
-                        <a href="{{ site.tag_dir }}/{{ tagname }}">{{ tagname }}</a>
+                        <a href="{{ site.baseurl }}{{ site.tag_dir }}/{{ tagname }}">{{ tagname }}</a>
                     </li>
                   {% endfor %}
                 </div>
