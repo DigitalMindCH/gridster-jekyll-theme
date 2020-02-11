@@ -1,5 +1,5 @@
 full_rebuild: true
-name: Gridster
+title: Gridster
 description: the material experience for jekyll
 destination: jekyllbuild
 url: #place url
@@ -8,7 +8,8 @@ permalink: /:title/
 paginate: 8
 paginate_path: /page/:num/
 infinite_scroll: true #change to false if you want to use pagination
-gems: [jekyll-paginate]
+plugins:
+    - jekyll-paginate
 tag_dir: /tag
 category_dir: /category
 author_dir: /author
