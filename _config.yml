@@ -1,6 +1,6 @@
 full_rebuild: true
-name: Gridster
-description: the material experience for jekyll
+name: aNTIBUROCRATAS
+description: Los que queiran trabajar como burocratas tiene que caer bien
 destination: jekyllbuild
 url: #place url
 baseurl: #place folder name if site is served in subfolder
